@@ -2,6 +2,8 @@ import { Component, signal, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { EmailService } from '../services/email.service';
+import { App } from '../app';
 
 @Component({
     selector: 'app-home',
@@ -12,6 +14,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
     private fb = inject(FormBuilder);
+    private emailService = inject(EmailService);
+    private app = inject(App);
 
     countryCodes = [
         { code: '+91', label: 'India (+91)' },
@@ -31,10 +35,16 @@ export class HomeComponent {
         details: ['', [Validators.required, Validators.minLength(10)]]
     });
 
-    onSubmit() {
+    async onSubmit() {
         if (this.contactForm.valid) {
-            console.log('Form Submitted Successfully:', this.contactForm.value);
-            this.contactForm.reset({ countryCode: '+91' });
+            try {
+                await this.emailService.sendContactEmail(this.contactForm.value);
+                this.app.showSuccessToaster('Thank you for contacting us.');
+                this.contactForm.reset({ countryCode: '+91' });
+            } catch (error) {
+                this.app.showSuccessToaster('Sorry, there was an error sending your message. Please try again later.');
+                console.error('Submission error:', error);
+            }
         } else {
             this.contactForm.markAllAsTouched();
         }
