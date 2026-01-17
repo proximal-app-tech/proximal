@@ -1,0 +1,118 @@
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Building the Future of <span class="highlight">Application Development</span></h1>
+            <p class="hero-subtitle">We empower startups and enterprises with cutting-edge software solutions tailored
+                for
+                success.</p>
+            <div class="cta-group">
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glass-sphere"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Ecosystem</h2>
+            <p class="section-subtitle">Discover our premium solutions designed for your growth.</p>
+
+            <div class="product-grid">
+                @for (product of products; track product.name) {
+                <div class="product-card" [routerLink]="product.link" style="cursor: pointer;">
+                    <div class="product-icon-container">
+                        <img [src]="product.icon" [alt]="product.name" class="product-image-icon">
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <div class="product-footer">
+                        <span class="view-more">View Details <span
+                                class="material-symbols-outlined">arrow_forward</span></span>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>Have a project in mind? Let's build something amazing together.</p>
+                </div>
+
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" formControlName="name" placeholder="Your Name"
+                            [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                        <span class="error-msg">
+                            @if (contactForm.get('name')?.errors?.['required']) { Name is required }
+                            @if (contactForm.get('name')?.errors?.['minlength']) { At least 3 characters }
+                        </span>
+                        }
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact">Contact Number</label>
+                            <div class="input-group">
+                                <select id="countryCode" formControlName="countryCode" class="country-select">
+                                    @for (c of countryCodes; track c.code) {
+                                    <option [value]="c.code">{{ c.label }}</option>
+                                    }
+                                </select>
+                                <input type="text" id="contact" formControlName="contact" placeholder="Phone Number"
+                                    maxlength="10" (input)="onContactInput($event)"
+                                    [class.error]="contactForm.get('contact')?.invalid && contactForm.get('contact')?.touched">
+                            </div>
+                            @if (contactForm.get('contact')?.invalid && contactForm.get('contact')?.touched) {
+                            <span class="error-msg">
+                                @if (contactForm.get('contact')?.errors?.['required']) { Contact number is required }
+                                @if (contactForm.get('contact')?.errors?.['pattern']) { Exactly 10 digits required }
+                            </span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" formControlName="email" placeholder="email@example.com"
+                                [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                            <span class="error-msg">
+                                @if (contactForm.get('email')?.errors?.['required']) { Email is required }
+                                @if (contactForm.get('email')?.errors?.['email']) { Invalid email format }
+                            </span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" formControlName="details" rows="4"
+                            placeholder="Tell us about your project..."
+                            [class.error]="contactForm.get('details')?.invalid && contactForm.get('details')?.touched"></textarea>
+                        @if (contactForm.get('details')?.invalid && contactForm.get('details')?.touched) {
+                        <span class="error-msg">
+                            @if (contactForm.get('details')?.errors?.['required']) { Details are required }
+                            @if (contactForm.get('details')?.errors?.['minlength']) { At least 10 characters required }
+                        </span>
+                        }
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" [disabled]="contactForm.invalid">Submit
+                        Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>

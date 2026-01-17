@@ -1,0 +1,147 @@
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Building the Future of <span class="highlight">Application Development</span></h1>
+            <p class="hero-subtitle">We empower startups and enterprises with cutting-edge software solutions tailored
+                for
+                success.</p>
+            <div class="cta-group">
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glass-sphere"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Ecosystem</h2>
+            <p class="section-subtitle">Discover our premium solutions designed for your growth.</p>
+
+            <div class="product-grid">
+                @for (product of products; track product.name) {
+                <div class="product-card" [routerLink]="product.link" style="cursor: pointer;">
+                    <div class="product-icon-container">
+                        <img [src]="product.icon" [alt]="product.name" class="product-image-icon">
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <div class="product-footer">
+                        <span class="view-more">View Details <span
+                                class="material-symbols-outlined">arrow_forward</span></span>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-visual-panel">
+                    <div class="visual-content">
+                        <div class="badge-mini">Let's Connect</div>
+                        <h2 class="display-title">Ready to build your <span class="highlight">Vision?</span></h2>
+                        <p class="panel-desc">Have a project in mind or just want to say hi? Our team is ready to help
+                            you
+                            scale your business with state-of-the-art software solutions.</p>
+
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div class="method-detail">
+                                    <span class="method-label">Email Us</span>
+                                    <span class="method-value">proximal.app.tech@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div class="method-detail">
+                                    <span class="method-label">Visit Us</span>
+                                    <span class="method-value">Coimbatore, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-blob"></div>
+                </div>
+
+                <div class="contact-form-container glass-card">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="premium-form">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="name">Full Name</label>
+                                <div class="field-wrapper">
+                                    <span class="field-icon material-symbols-outlined">person</span>
+                                    <input type="text" id="name" formControlName="name" placeholder="John Doe"
+                                        [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                                </div>
+                                @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                                <span class="error-msg">At least 3 characters required</span>
+                                }
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Work Email</label>
+                                <div class="field-wrapper">
+                                    <span class="field-icon material-symbols-outlined">alternate_email</span>
+                                    <input type="email" id="email" formControlName="email"
+                                        placeholder="john@company.com"
+                                        [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                                </div>
+                                @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                                <span class="error-msg">Valid email required</span>
+                                }
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact">Phone Number</label>
+                                <div class="input-group-premium">
+                                    <select id="countryCode" formControlName="countryCode" class="country-picker">
+                                        @for (c of countryCodes; track c.code) {
+                                        <option [value]="c.code">{{ c.label }}</option>
+                                        }
+                                    </select>
+                                    <input type="text" id="contact" formControlName="contact"
+                                        placeholder="10-digit number" maxlength="10" (input)="onContactInput($event)"
+                                        [class.error]="contactForm.get('contact')?.invalid && contactForm.get('contact')?.touched">
+                                </div>
+                                @if (contactForm.get('contact')?.invalid && contactForm.get('contact')?.touched) {
+                                <span class="error-msg">10-digit number required</span>
+                                }
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="details">Project Requirements</label>
+                                <div class="field-wrapper">
+                                    <textarea id="details" formControlName="details" rows="4"
+                                        placeholder="Describe your project goal, budget, and timeline..."
+                                        [class.error]="contactForm.get('details')?.invalid && contactForm.get('details')?.touched"></textarea>
+                                </div>
+                                @if (contactForm.get('details')?.invalid && contactForm.get('details')?.touched) {
+                                <span class="error-msg">Please provide more details (min 10 chars)</span>
+                                }
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-glow btn-large"
+                            [disabled]="contactForm.invalid">
+                            <span>Send Message</span>
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

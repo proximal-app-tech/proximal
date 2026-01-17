@@ -1,0 +1,76 @@
+<div class="invoicey-page">
+    <!-- Back Button -->
+    <a routerLink="/" class="back-link">
+        <span class="material-symbols-outlined">arrow_back</span> Back to Home
+    </a>
+
+    <!-- Hero Section -->
+    <section class="invoicey-hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge">Version 2.0 Now Live</div>
+                <h1 class="gradient-title">Invoicey</h1>
+                <p class="tagline">Smart Billing & Invoicing Solution</p>
+                <p class="description">
+                    A modern, high-performance billing application built with Flutter,
+                    designed to streamline business operations for organizations of all sizes.
+                </p>
+                <div class="technical-pills">
+                    @for (highlight of technicalHighlights; track highlight.label) {
+                    <div class="pill">
+                        <span class="pill-label">{{ highlight.label }}:</span>
+                        <span class="pill-value">{{ highlight.value }}</span>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="glass-bg"></div>
+                <img src="assets/invoicey_image_dart_theme.png" alt="Invoicey Product Preview" class="product-hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                @for (feature of features; track feature.title) {
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-symbols-outlined">{{ feature.icon }}</span>
+                    </div>
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="showcase-section">
+        <div class="container glass-card showcase-inner">
+            <div class="showcase-content">
+                <h2>Why Choose Invoicey?</h2>
+                <p>
+                    Invoicey eliminates the overhead of manual billing, reducing errors and saving time.
+                    Whether you're a small retailer or a growing enterprise, Invoicey scales with your business,
+                    providing the professional edge needed in today's market.
+                </p>
+                <ul class="benefit-list">
+                    <li><span class="material-symbols-outlined">check_circle</span> Real-time Backend with Supabase</li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Secure by Design (RLS
+                        Implementation)</li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Professional HSN/SKU organization
+                    </li>
+                </ul>
+                <button class="btn btn-primary">Get Started Now</button>
+            </div>
+            <div class="showcase-visual">
+                <img src="assets/invoicey.png" alt="Invoicey Dashboard" class="showcase-img">
+            </div>
+        </div>
+    </section>
+</div>
