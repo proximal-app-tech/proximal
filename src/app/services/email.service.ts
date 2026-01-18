@@ -6,7 +6,7 @@ declare const emailjs: any;
   providedIn: 'root'
 })
 export class EmailService {
-  private serviceId = 'service_1di92ik';
+  private serviceId = 'service_qri04qg';
   private templateId = 'template_bi3ssec';
   private publicKey = '57WhnXuqtgnjSxGJr';
 
