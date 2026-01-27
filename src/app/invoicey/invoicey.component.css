@@ -223,6 +223,46 @@
     color: var(--primary);
 }
 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn .material-symbols-outlined {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .material-symbols-outlined {
+    transform: translateX(5px);
+}
+
 .showcase-img {
     width: 100%;
     border-radius: 20px;
@@ -251,7 +291,24 @@
         text-align: center;
     }
 
+    .hero-text,
+    .showcase-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technical-pills,
+    .benefit-list {
+        justify-content: center;
+    }
+
     .gradient-title {
         font-size: 3.5rem;
+    }
+
+    .product-hero-img {
+        transform: none;
+        margin-top: 3rem;
     }
 }
