@@ -27,13 +27,13 @@ export class InvoiceyComponent {
             icon: 'qr_code_scanner'
         },
         {
-            title: 'Customer CRM',
-            description: 'Maintain a detailed database of customers, including billing and consignee information.',
-            icon: 'person_search'
+            title: 'Vendor Management',
+            description: 'Maintain a comprehensive supplier directory with interactive one-click contact options for Phone, WhatsApp, and Email.',
+            icon: 'store'
         },
         {
-            title: 'Multi-admin Support',
-            description: 'Secure role-based access control and customizable organization settings for your team.',
+            title: 'Multi-admin & Modern UI',
+            description: 'Secure role-based access control and a modernized vertical card-list dashboard layout for effortless management.',
             icon: 'manage_accounts'
         },
         {
