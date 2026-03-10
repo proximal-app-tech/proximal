@@ -97,6 +97,25 @@
     font-weight: 600;
 }
 
+.user-guide-pill {
+    text-decoration: none;
+    transition: all 0.3s;
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.3);
+    cursor: pointer;
+}
+
+.user-guide-pill:hover {
+    background: rgba(99, 102, 241, 0.25);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.user-guide-pill .material-symbols-outlined {
+    font-size: 18px;
+    color: var(--primary);
+}
+
 .hero-image-container {
     position: relative;
     display: flex;
