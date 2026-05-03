@@ -1,0 +1,102 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">settings</span> 2. Organization Settings Guide</h2>
+    <p>The <strong>Organization Settings</strong> section is the central hub for managing your business profile,
+        subscription plans, and integrations within Invoicey. Keeping this information accurate ensures that your
+        invoices look professional and your automated workflows function correctly.</p>
+    <p>The settings are divided into three main tabs: <strong>General</strong>, <strong>Subscription</strong>, and
+        <strong>Payments</strong>.
+    </p>
+    <hr>
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+    <hr>
+    <h3 style="text-align: center;">General Tab</h3>
+    <p><strong>What it is:</strong> The General tab houses all the core details about your business, including contact
+        information, banking details, and external service integrations.</p>
+    <p><strong>Why it helps:</strong> The information entered here directly populates the header and footer of the PDFs
+        generated for your customers. It also controls powerful automations like online payment collection and automatic
+        email sending.</p>
+
+    <h4>Basic Information</h4>
+    <ul>
+        <li><strong>Organization Logo</strong>: Upload your company's logo. This will be prominently displayed at the
+            top of all generated invoices.</li>
+        <li><strong>Organization Name</strong>: Your registered business name.</li>
+        <li><strong>GSTIN / UIN</strong>: Your tax identification number.</li>
+        <li><strong>Complete Address, City, State, ZIP Code</strong>: Your physical billing address. <em>(Note: The
+                state selection is critical as it dictates whether CGST/SGST or IGST is applied to your invoices).</em>
+        </li>
+        <li><strong>Phone Number & Email Address</strong>: Your primary business contact details.</li>
+    </ul>
+
+    <h4>Bank Details</h4>
+    <p>These fields allow you to provide offline payment instructions to your customers directly on the invoice
+        document.</p>
+    <ul>
+        <li><strong>Bank Name</strong> & <strong>Branch Name</strong></li>
+        <li><strong>Account Holder Name</strong></li>
+        <li><strong>Account Number</strong></li>
+        <li><strong>IFSC Code</strong></li>
+    </ul>
+
+    <h4>Payment Gateway Integration</h4>
+    <ul>
+        <li><strong>Integrate Payment Gateway (Toggle)</strong>: Enable this to collect payments from your customers via
+            Credit Card, Debit Card, or UPI directly through an online link.</li>
+        <li><strong>Payment Provider</strong>: Currently supports <strong>Razorpay</strong>.</li>
+        <li><strong>Key ID & Key Secret</strong>: The live API credentials provided by your payment gateway dashboard.
+            Entering these links your Invoicey account to your merchant account.</li>
+    </ul>
+
+    <h4>Email Settings</h4>
+    <ul>
+        <li><strong>Configure Email Settings (Toggle)</strong>: Enable this to automatically send a "Thank You" email
+            containing the attached PDF invoice to your customer the moment an invoice is generated.</li>
+        <li><strong>SMTP Credentials (Host, Port, Username, Password)</strong>: Your custom mail server settings (e.g.,
+            Gmail SMTP, Outlook, or custom domain). This ensures emails are sent from your own professional email
+            address.</li>
+    </ul>
+
+    <h4>Danger Zone</h4>
+    <ul>
+        <li><strong>Deactivate Organization</strong>: Temporarily suspends access for all users in your organization.
+            This is useful if you are pausing business operations.</li>
+        <li><strong>Delete Organization</strong>: <strong>Irreversible action.</strong> Permanently deletes your
+            organization, users, customers, and all invoice data from the platform.</li>
+    </ul>
+
+    <hr>
+
+    <h3 style="text-align: center;">Subscription Tab</h3>
+    <p><strong>What it is:</strong> This tab displays the current status of your Invoicey software subscription.</p>
+    <p><strong>Why it helps:</strong> It provides a quick overview of your plan limits and alerts you when your
+        subscription is nearing expiration to prevent any disruption in your ability to generate invoices.</p>
+    <h4>Available Information</h4>
+    <ul>
+        <li><strong>Active Plan</strong>: The name of the tier you are currently subscribed to (e.g., Trial, Basic,
+            Pro).</li>
+        <li><strong>Status</strong>: Indicates whether your plan is currently <strong>ACTIVE</strong> or
+            <strong>EXPIRED</strong>.
+        </li>
+        <li><strong>Expires On</strong>: The exact date your current billing cycle ends.</li>
+        <li><strong>Features Included</strong>: A checklist reminding you of the capabilities unlocked by your current
+            plan.</li>
+        <li><strong>Subscribe Now / Extend Subscription</strong>: A quick-action button that takes you to the pricing
+            page to renew or upgrade your plan.</li>
+    </ul>
+
+    <hr>
+
+    <h3 style="text-align: center;">Payments Tab</h3>
+    <p><strong>What it is:</strong> A historical ledger of all payments you have made to Invoicey for your software
+        subscriptions.</p>
+    <p><strong>Why it helps:</strong> It simplifies your internal accounting by providing easy access to past
+        subscription invoices and receipts.</p>
+    <h4>Available Information</h4>
+    <ul>
+        <li><strong>Payment List</strong>: A chronological list of transactions showing the amount paid and the payment
+            status (e.g., COMPLETED).</li>
+        <li><strong>Transaction Details</strong>: Displays the date of the payment and the unique Transaction ID.</li>
+        <li><strong>Download Receipt</strong>: Each entry features a download icon (⬇️) that generates a PDF receipt for
+            that specific subscription payment, which you can save for your tax and accounting records.</li>
+    </ul>
+</section>

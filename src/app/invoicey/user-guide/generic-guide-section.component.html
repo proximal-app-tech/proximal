@@ -1,6 +1,6 @@
 <ng-container [ngSwitch]="sectionId">
     <section *ngSwitchCase="'products'" class="guide-section">
-        <h2><span class="material-symbols-outlined">inventory_2</span> 2. Product Management (Product Master)
+        <h2><span class="material-symbols-outlined">inventory_2</span> 3. Product Management (Product Master)
         </h2>
         <div class="info-box">
             <span class="material-symbols-outlined">info</span>
@@ -20,12 +20,12 @@
     </section>
 
     <section *ngSwitchCase="'discounts'" class="guide-section">
-        <h2><span class="material-symbols-outlined">sell</span> 3. Discount Management</h2>
+        <h2><span class="material-symbols-outlined">sell</span> 4. Discount Management</h2>
         <p>Create promo codes (e.g., "HOLIDAY20") with percentage discounts, usage limits, and expiry dates.</p>
     </section>
 
     <section *ngSwitchCase="'users'" class="guide-section">
-        <h2><span class="material-symbols-outlined">group</span> 4. User Management</h2>
+        <h2><span class="material-symbols-outlined">group</span> 5. User Management</h2>
         <p>Collaborate by adding team members with specific roles:</p>
         <ul>
             <li><strong>Administrator</strong>: Full access.</li>
@@ -33,34 +33,13 @@
         </ul>
     </section>
 
-    <section *ngSwitchCase="'org-settings'" class="guide-section">
-        <h2><span class="material-symbols-outlined">settings</span> 5. Organization Settings</h2>
-        <div class="settings-grid">
-            <div class="setting-item">
-                <span class="material-symbols-outlined">image</span>
-                <h4>Logo</h4>
-                <p>Upload and crop your company logo for PDFs.</p>
-            </div>
-            <div class="setting-item">
-                <span class="material-symbols-outlined">account_balance</span>
-                <h4>Bank Details</h4>
-                <p>Enter bank info to be printed on invoices.</p>
-            </div>
-            <div class="setting-item">
-                <span class="material-symbols-outlined">card_membership</span>
-                <h4>Subscription</h4>
-                <p>View plan, expiry, and upgrade options.</p>
-            </div>
-        </div>
-    </section>
-
     <section *ngSwitchCase="'subscriptions'" class="guide-section">
-        <h2><span class="material-symbols-outlined">payments</span> 7. Subscriptions & Payments</h2>
+        <h2><span class="material-symbols-outlined">payments</span> 6. Subscriptions & Payments</h2>
         <p>Manage access and view financial history under <strong>Admin > Organization Settings</strong>.</p>
     </section>
 
     <section *ngSwitchCase="'billing'" class="guide-section">
-        <h2><span class="material-symbols-outlined">receipt_long</span> 8. Quotations & Invoices</h2>
+        <h2><span class="material-symbols-outlined">receipt_long</span> 7. Quotations & Invoices</h2>
         <div class="workflow-card">
             <h4>Quotation Workflow</h4>
             <p>Draft → Customer Approved/Rejected → Generate Invoice</p>
@@ -73,13 +52,13 @@
     </section>
 
     <section *ngSwitchCase="'crm'" class="guide-section">
-        <h2><span class="material-symbols-outlined">contact_page</span> 9. CRM (Customers & Vendors)</h2>
+        <h2><span class="material-symbols-outlined">contact_page</span> 8. CRM (Customers & Vendors)</h2>
         <p>Maintain a complete database of business contacts with lifetime value metrics and quick contact
             actions.</p>
     </section>
 
     <section *ngSwitchCase="'reporting'" class="guide-section">
-        <h2><span class="material-symbols-outlined">analytics</span> 10. Declarations & Reporting</h2>
+        <h2><span class="material-symbols-outlined">analytics</span> 9. Declarations & Reporting</h2>
         <p>Manage invoice declarations and export GST Return Sheets (GSTR-1, GSTR-3B) as CSV files.</p>
     </section>
 
