@@ -1,0 +1,100 @@
+<section id="onboarding" class="guide-section">
+    <h2><span class="material-symbols-outlined">person_add</span> 1. Registration & Subscription Guide</h2>
+    <p>Welcome to <strong>Invoicey</strong>! This guide will walk you through the process of creating your account,
+        registering your organization, and selecting a subscription plan.</p>
+
+    <hr>
+
+    <h3 style="text-align: center;">Registration Process</h3>
+    <p>To get started, you need to create an account and set up your organization details. The registration form is
+        divided into two main sections: <strong>User Information</strong> and <strong>Organization Details</strong>.</p>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+
+    <h4>User Information:</h4>
+    <p>This section collects your personal login credentials.</p>
+    <ul>
+        <li><strong>Full Name</strong>: Enter your complete name. This is a mandatory field.</li>
+        <li><strong>Email Address</strong>: Provide a valid email address. This will be used to verify your account,
+            send notifications, and log in to the application. The system will automatically check if the email is
+            already registered.</li>
+        <li><strong>Password</strong>: Create a strong password. It must meet the following criteria:
+            <ul>
+                <li>Minimum of 6 characters in length.</li>
+                <li>At least 1 uppercase letter (A-Z).</li>
+                <li>At least 1 lowercase letter (a-z).</li>
+                <li>At least 1 number (0-9).</li>
+                <li>At least 1 special symbol (e.g., <code>!@#$%^&*</code>).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Organization Details:</h4>
+    <p>This section collects information about your business to ensure invoices and tax calculations are accurate.</p>
+    <ul>
+        <li><strong>Organization Name</strong>: The official or legal name of your business/company.</li>
+        <li><strong>Address</strong>: The physical billing address of your organization.</li>
+        <li><strong>GSTIN</strong>: Your 15-character Goods and Services Tax Identification Number (e.g.,
+            <code>22AAAAA0000A1Z5</code>). Ensure this is accurate as it cannot be duplicated across multiple accounts.
+        </li>
+        <li><strong>City</strong>: The city where your organization is based.</li>
+        <li><strong>State</strong>: Select your state from the provided dropdown list. This is crucial for calculating
+            the correct GST type (CGST/SGST vs. IGST).</li>
+        <li><strong>ZIP Code</strong>: Your area's postal/PIN code.</li>
+        <li><strong>Country</strong>: This field is pre-filled as <strong>India</strong> and cannot be changed.</li>
+    </ul>
+
+    <h4>Completing Registration:</h4>
+    <p>Before clicking the <strong>Complete Registration</strong> button:</p>
+    <ul>
+        <li><strong>Terms and Privacy Policy</strong>: You must check the box to agree to the Terms and Conditions and
+            the Privacy Policy.</li>
+        <li>Once submitted, you will see a success message prompting you to check your email to verify your account.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3 style="text-align: center;">2. Subscription Selection</h3>
+    <p>After you have registered and verified your account, the next step is to choose a subscription plan tailored to
+        your business needs.</p>
+
+    <h4>Applying a Referral Code:</h4>
+    <p>If you have a promotional or referral code:</p>
+    <ol>
+        <li>Locate the <strong>Enter Referral Code</strong> field at the top of the subscription screen.</li>
+        <li>Enter your code and click <strong>Apply</strong>.</li>
+        <li>If valid, a success message will appear showing your discount percentage, and the prices of all plans will
+            automatically update to reflect the discount.</li>
+    </ol>
+
+    <h4>Choosing a Plan:</h4>
+    <p>You will see a list of available plans. For each plan, you can review the following details:</p>
+    <ul>
+        <li><strong>Plan Name</strong>: The title of the subscription tier (e.g., Trial, Pro, Enterprise).</li>
+        <li><strong>Base Price</strong>: The cost of the plan (discounted if a referral code was applied).</li>
+        <li><strong>Tax Details</strong>: Taxes are automatically calculated and added to your final total.
+            <ul>
+                <li>If your organization's state is Tamil Nadu, it calculates <strong>GST 18% (CGST 9% + SGST
+                        9%)</strong>.</li>
+                <li>For all other states, it calculates <strong>IGST 18%</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Total Amount</strong>: The final amount payable, inclusive of all discounts and taxes.</li>
+        <li><strong>Duration</strong>: The validity period of the plan in days.</li>
+        <li><strong>Features</strong>: A checklist of the capabilities and limits included in that specific plan.</li>
+    </ul>
+
+    <h4>Making the Payment:</h4>
+    <ol>
+        <li>Review the plan details and click <strong>Subscribe Now</strong> (or <strong>Get Started</strong> for free
+            plans).</li>
+        <li><strong>Paid Plans</strong>: You will be securely redirected to our payment gateway (Razorpay). You can
+            complete the transaction using various supported methods such as Credit/Debit Cards, UPI, or external
+            wallets like Paytm.</li>
+        <li><strong>Free/Trial Plans</strong>: If the total amount is ₹0, the subscription will activate instantly
+            without routing to the payment gateway.</li>
+        <li>Upon a successful transaction, a confirmation message will appear, and you will be fully set up to use
+            Invoicey!</li>
+    </ol>
+</section>

@@ -17,7 +17,7 @@
                 <ul>
                     @for (section of sections; track section.id) {
                     <li>
-                        <a (click)="scrollToSection(section.id)" class="nav-item">
+                        <a [routerLink]="['/invoicey/user-guide', section.id]" routerLinkActive="active" class="nav-item">
                             {{ section.title }}
                         </a>
                     </li>
@@ -28,129 +28,7 @@
 
         <!-- Main Content Area -->
         <main class="guide-content">
-            <section id="welcome" class="guide-section">
-                <div class="glass-card welcome-card">
-                    <p>Welcome to <strong>Invoicey</strong>. This guide will help you set up and manage your
-                        organization effectively.</p>
-                </div>
-            </section>
-
-            <section id="onboarding" class="guide-section">
-                <h2><span class="material-symbols-outlined">person_add</span> 1. Registration & Onboarding</h2>
-                <p>To get started, you need to create an account for your organization.</p>
-                <div class="step-list">
-                    <div class="step">
-                        <span class="step-num">1</span>
-                        <p><strong>Create Account</strong>: Navigate to the Registration screen.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">2</span>
-                        <p><strong>User Information</strong>: Enter your Full Name, Email Address, and a strong Password.
-                        </p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">3</span>
-                        <div class="step-details">
-                            <p><strong>Organization Details</strong>:</p>
-                            <ul>
-                                <li><strong>Organization Name</strong>: Your business's legal name.</li>
-                                <li><strong>Address</strong>: Complete business address.</li>
-                                <li><strong>GSTIN (Optional)</strong>: If you are GST registered.</li>
-                                <li><strong>Location</strong>: Select your City, State, and ZIP Code.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">4</span>
-                        <p><strong>Verification</strong>: Check your email for a verification link to activate your
-                            account.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="products" class="guide-section">
-                <h2><span class="material-symbols-outlined">inventory_2</span> 2. Product Management (Product Master)
-                </h2>
-                <div class="info-box">
-                    <span class="material-symbols-outlined">info</span>
-                    <p>Pre-requisites: <strong>Product Categories</strong> and <strong>Tax Configuration</strong>.</p>
-                </div>
-                <h3>A. Product Categories</h3>
-                <p>Organize your items into groups (e.g., "Electronics", "Consulting Services"). Go to <strong>Admin >
-                        Product Categories</strong> and click <strong>"+"</strong>.</p>
-
-                <h3>B. Tax Configuration</h3>
-                <p>Define GST rates (e.g., "GST 18%", "GST 5%"). The system automatically calculates CGST/SGST or IGST.
-                </p>
-
-                <h3>C. Managing Products</h3>
-                <p>Go to <strong>Admin > Product Master</strong> to add items with HSN/SKU, Unit of Measure, and Pricing.
-                </p>
-            </section>
-
-            <section id="discounts" class="guide-section">
-                <h2><span class="material-symbols-outlined">sell</span> 3. Discount Management</h2>
-                <p>Create promo codes (e.g., "HOLIDAY20") with percentage discounts, usage limits, and expiry dates.</p>
-            </section>
-
-            <section id="users" class="guide-section">
-                <h2><span class="material-symbols-outlined">group</span> 4. User Management</h2>
-                <p>Collaborate by adding team members with specific roles:</p>
-                <ul>
-                    <li><strong>Administrator</strong>: Full access.</li>
-                    <li><strong>Staff</strong>: Access to billing and basic customer management.</li>
-                </ul>
-            </section>
-
-            <section id="org-settings" class="guide-section">
-                <h2><span class="material-symbols-outlined">settings</span> 5. Organization Settings</h2>
-                <div class="settings-grid">
-                    <div class="setting-item">
-                        <span class="material-symbols-outlined">image</span>
-                        <h4>Logo</h4>
-                        <p>Upload and crop your company logo for PDFs.</p>
-                    </div>
-                    <div class="setting-item">
-                        <span class="material-symbols-outlined">account_balance</span>
-                        <h4>Bank Details</h4>
-                        <p>Enter bank info to be printed on invoices.</p>
-                    </div>
-                    <div class="setting-item">
-                        <span class="material-symbols-outlined">card_membership</span>
-                        <h4>Subscription</h4>
-                        <p>View plan, expiry, and upgrade options.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="subscriptions" class="guide-section">
-                <h2><span class="material-symbols-outlined">payments</span> 7. Subscriptions & Payments</h2>
-                <p>Manage access and view financial history under <strong>Admin > Organization Settings</strong>.</p>
-            </section>
-
-            <section id="billing" class="guide-section">
-                <h2><span class="material-symbols-outlined">receipt_long</span> 8. Quotations & Invoices</h2>
-                <div class="workflow-card">
-                    <h4>Quotation Workflow</h4>
-                    <p>Draft → Customer Approved/Rejected → Generate Invoice</p>
-                </div>
-                <h3>Invoice History</h3>
-                <p>Search by Invoice Number or Customer Name in <strong>Billing > Invoice List</strong>.</p>
-                <h3>Pending Payments</h3>
-                <p>Track <strong>PENDING</strong> or <strong>PARTIAL</strong> payments and record receipts (Cash, Card,
-                    UPI).</p>
-            </section>
-
-            <section id="crm" class="guide-section">
-                <h2><span class="material-symbols-outlined">contact_page</span> 9. CRM (Customers & Vendors)</h2>
-                <p>Maintain a complete database of business contacts with lifetime value metrics and quick contact
-                    actions.</p>
-            </section>
-
-            <section id="reporting" class="guide-section">
-                <h2><span class="material-symbols-outlined">analytics</span> 10. Declarations & Reporting</h2>
-                <p>Manage invoice declarations and export GST Return Sheets (GSTR-1, GSTR-3B) as CSV files.</p>
-            </section>
+            <router-outlet></router-outlet>
         </main>
     </div>
 </div>

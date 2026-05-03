@@ -1,0 +1,41 @@
+.image-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.screenshot-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.guide-section h3 {
+    color: var(--primary-color, #4a90e2);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.guide-section h4 {
+    color: #1f2937;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.guide-section ul, .guide-section ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.guide-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.guide-section hr {
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
