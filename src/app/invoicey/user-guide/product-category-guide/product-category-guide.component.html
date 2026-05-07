@@ -1,0 +1,57 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">category</span> Product Category Guide</h2>
+    <p>The <strong>Category Creation</strong> screen allows you to group your products or services into distinct
+        classifications. Properly categorizing your inventory makes it easier to filter, search, and manage your items,
+        as well as providing more organized reports.</p>
+    <p>Here is a detailed breakdown of each field on the category creation screen:</p>
+
+    <hr>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+
+    <hr>
+
+    <h3>1. Category Name</h3>
+    <p><strong>Required</strong></p>
+    <p>This is the primary identifier for your category (e.g., <em>Electronics, Consulting Services, Food &
+            Beverage</em>).</p>
+    <ul>
+        <li><strong>Purpose</strong>: To provide a clear, recognizable name for grouping related products or services
+            together.</li>
+        <li><strong>Usage</strong>: Enter a concise, capitalized name. This name will appear across the app whenever you
+            are filtering or selecting items.</li>
+    </ul>
+
+    <h3>2. Description</h3>
+    <p><strong>Optional</strong></p>
+    <p>A brief explanation of what types of items belong in this specific category.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Helps provide context, especially useful if you have multiple staff members
+            managing your inventory or if your categories are broad.</li>
+        <li><strong>Usage</strong>: Add a short sentence describing the contents, such as <em>"All physical electronic
+                goods and accessories"</em> or <em>"Hourly consulting and labor charges"</em>.</li>
+    </ul>
+
+    <h3>3. Auto Discount Code</h3>
+    <p><strong>Optional</strong></p>
+    <p>This dropdown allows you to link a pre-existing active discount to this specific category.</p>
+    <ul>
+        <li><strong>Purpose</strong>: To automatically apply promotional logic to all items that fall under this
+            category.</li>
+        <li><strong>Usage</strong>: Select an active discount code from the list. Once selected, any item categorized
+            under this group will automatically inherit the associated discount rules. Note that you must first create
+            discount codes in the <strong>Discounts</strong> section of Product Settings before they will appear in this
+            list.</li>
+    </ul>
+
+    <hr>
+
+    <div class="info-box">
+        <span class="material-symbols-outlined">lightbulb</span>
+        <div>
+            <strong>Best Practice:</strong> Deleting a category will <strong>not</strong> delete the products inside it;
+            they will simply become "uncategorized". However, we recommend planning your category structure carefully to
+            minimize having to reorganize large numbers of items later.
+        </div>
+    </div>
+</section>

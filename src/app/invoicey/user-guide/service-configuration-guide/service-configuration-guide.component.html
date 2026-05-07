@@ -1,0 +1,82 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">design_services</span> Service Master Guide</h2>
+    <p>The <strong>Service Master</strong> is the central hub for managing all the professional services your
+        organization provides. By setting up your services here, you can quickly add them to invoices with automatically
+        calculated prices, taxes, and discounts, ensuring accuracy and saving you time during billing.</p>
+
+    <hr>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+
+    <hr>
+
+    <h3>Why Use the Service Master?</h3>
+    <ul>
+        <li><strong>Speed</strong>: Instead of typing out service details manually for every invoice, you simply select
+            the service from a dropdown.</li>
+        <li><strong>Compliance</strong>: By associating the correct SAC Code and Tax Rule with a service, you guarantee
+            that your invoices remain GST-compliant.</li>
+        <li><strong>Consistency</strong>: Ensures uniform pricing across your organization.</li>
+        <li><strong>Reporting</strong>: By assigning services to specific Categories, you can generate organized revenue
+            reports later.</li>
+    </ul>
+
+    <hr>
+
+    <h3>How to Add or Edit a Service</h3>
+    <p>To add a new service, click the <strong>+</strong> icon (on mobile) or the <strong>ADD NEW SERVICE</strong>
+        button (on desktop). To edit an existing service, click the <strong>Edit (pencil)</strong> icon next to it in
+        the list.</p>
+    <p>You will need to fill out the following fields in the Service Form:</p>
+
+    <h4>1. Service Name (Required)</h4>
+    <p>The name or title of the service you are offering (e.g., <em>Website Development</em>, <em>Consultation Fee</em>,
+        <em>Annual Maintenance</em>). This is exactly how it will appear on the final invoice.</p>
+
+    <h4>2. SAC Code</h4>
+    <p><strong>Services Accounting Code (SAC)</strong> is a classification system used by the GST department to identify
+        services. Entering the correct SAC code is highly recommended for GST compliance on B2B invoices.</p>
+
+    <h4>3. Service Price (Required)</h4>
+    <p>The base price of the service before any taxes or discounts are applied.</p>
+
+    <h4>4. Unit</h4>
+    <p>How do you measure and bill this service? You can select from the following dropdown options:</p>
+    <ul>
+        <li><strong>Hour (HR)</strong></li>
+        <li><strong>Day (DAY)</strong></li>
+        <li><strong>Month (MONTH)</strong></li>
+        <li><strong>Project (PROJECT)</strong></li>
+        <li><strong>Per Unit (UNIT)</strong></li>
+    </ul>
+
+    <h4>5. Category (Required)</h4>
+    <p>Select the group this service belongs to. Grouping services helps keep your catalog organized and is essential
+        for detailed sales reporting. <em>(Note: Categories must be created in the Category Master before they can be
+            assigned here)</em>.</p>
+
+    <h4>6. Tax Rule (Required)</h4>
+    <p>Assign the applicable GST rate (e.g., <em>GST 18%</em>) to the service. When you add this service to an invoice,
+        the system will use this rule to calculate the tax automatically based on the customer's state. <em>(Note: Tax
+            rules must be set up in the Tax Configuration screen)</em>.</p>
+
+    <h4>7. Auto Discount Code (Optional)</h4>
+    <p>If you run specific promotions, you can attach an active discount code to this service.</p>
+    <ul>
+        <li><strong>None (Inherit from Category)</strong>: The service will default to whatever discount is applied to
+            its parent category.</li>
+        <li><strong>Specific Discount</strong>: Overrides the category logic, applying a distinct percentage discount to
+            this specific service whenever it is billed.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Managing Your Services</h3>
+    <ul>
+        <li><strong>Search</strong>: Use the search bar at the top of the screen to quickly find a service by its Name
+            or its SAC code.</li>
+        <li><strong>Delete</strong>: Click the <strong>Delete (trash bin)</strong> icon to remove a service from your
+            master list. <em>Note: Deleting a service will not affect past invoices that have already been generated,
+                but it will remove it from the selection list for future invoices.</em></li>
+    </ul>
+</section>

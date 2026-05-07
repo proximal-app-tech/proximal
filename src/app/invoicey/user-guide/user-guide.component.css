@@ -5,6 +5,14 @@
     background: #f8f9fa;
 }
 
+.mobile-menu-toggle {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -226,9 +234,49 @@
 @media (max-width: 1024px) {
     .guide-layout {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .guide-sidebar {
+        position: relative;
+        top: 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        overflow: hidden;
+    }
+
+    .sidebar-nav {
+        display: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .guide-sidebar.menu-open .sidebar-nav {
+        display: block;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .mobile-menu-toggle h3 {
+        margin: 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--primary);
+    }
+    
+    .desktop-only {
         display: none;
     }
     

@@ -11,13 +11,17 @@
 
     <div class="container guide-layout">
         <!-- Sticky Sidebar Navigation -->
-        <aside class="guide-sidebar">
-            <nav class="sidebar-nav">
+        <aside class="guide-sidebar" [class.menu-open]="isMobileMenuOpen">
+            <div class="mobile-menu-toggle" (click)="toggleMobileMenu()">
                 <h3>Contents</h3>
+                <span class="material-symbols-outlined">{{ isMobileMenuOpen ? 'expand_less' : 'expand_more' }}</span>
+            </div>
+            <nav class="sidebar-nav">
+                <h3 class="desktop-only">Contents</h3>
                 <ul>
                     @for (section of sections; track section.id) {
                     <li>
-                        <a [routerLink]="['/invoicey/user-guide', section.id]" routerLinkActive="active" class="nav-item">
+                        <a [routerLink]="['/invoicey/user-guide', section.id]" routerLinkActive="active" class="nav-item" (click)="isMobileMenuOpen = false">
                             {{ section.title }}
                         </a>
                     </li>

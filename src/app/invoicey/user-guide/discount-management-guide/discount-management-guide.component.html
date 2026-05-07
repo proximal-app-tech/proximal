@@ -1,0 +1,90 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">sell</span> Discount Management Guide</h2>
+    <p>The <strong>Discount Management</strong> screen allows you to create and manage promotional codes and coupons.
+        These discounts can be applied to quotations and invoices during checkout to incentivize sales or offer special
+        pricing to customers.</p>
+    <p>Here is a detailed breakdown of each field on the Discount Management screen:</p>
+
+    <hr>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+
+    <hr>
+
+    <h3>1. Discount Name</h3>
+    <p><strong>Required</strong></p>
+    <p>An internal label for your discount campaign.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Helps you easily identify the discount from your list of promotions.</li>
+        <li><strong>Usage</strong>: Enter a clear, descriptive name (e.g., <em>Summer Sale 2026, VIP Customer Discount,
+                Black Friday Promo</em>).</li>
+    </ul>
+
+    <h3>2. Code</h3>
+    <p><strong>Required</strong></p>
+    <p>The actual promotional code that will be used or entered during billing.</p>
+    <ul>
+        <li><strong>Purpose</strong>: This is the identifier applied to invoices to trigger the discount.</li>
+        <li><strong>Usage</strong>: Enter a short, memorable code (e.g., <em>SUMMER20, VIP15, SAVE10</em>). This code
+            will automatically be capitalized by the system.</li>
+    </ul>
+
+    <h3>3. Discount %</h3>
+    <p><strong>Required</strong></p>
+    <p>The percentage amount to be discounted.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Determines how much of the invoice total will be deducted.</li>
+        <li><strong>Usage</strong>: Enter a number between 0 and 100. <em>Note: All discounts are calculated as a
+                percentage of the pre-tax subtotal.</em></li>
+    </ul>
+
+    <h3>4. Max Usage</h3>
+    <p><strong>Optional</strong></p>
+    <p>A limit on how many times this specific discount code can be used in total across all your customers.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Prevents a discount from being overused (e.g., limited to the first 50 customers).
+        </li>
+        <li><strong>Usage</strong>: Enter a number (e.g., <em>50</em>). If left blank, the discount code can be used an
+            unlimited number of times.</li>
+    </ul>
+
+    <h3>5. Start Date</h3>
+    <p><strong>Required</strong></p>
+    <p>The date from which the discount becomes valid.</p>
+    <ul>
+        <li><strong>Usage</strong>: Select the date the promotion begins. By default, this is set to the current day.
+        </li>
+    </ul>
+
+    <h3>6. End Date</h3>
+    <p><strong>Optional</strong></p>
+    <p>The expiration date for the discount.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Perfect for flash sales or seasonal offers.</li>
+        <li><strong>Usage</strong>: Select a date when the discount should stop working. If left blank, the discount
+            will never expire automatically.</li>
+    </ul>
+
+    <h3>7. Discount Status</h3>
+    <p><strong>Required (Toggle)</strong></p>
+    <p>A switch to quickly enable or disable the discount.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Allows you to temporarily pause a promotion without having to permanently delete
+            it.</li>
+        <li><strong>Usage</strong>: Toggle to <strong>Active</strong> to allow the code to be used. Toggle to
+            <strong>Inactive</strong> to prevent the code from being applied to any new invoices.
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class="info-box">
+        <span class="material-symbols-outlined">lightbulb</span>
+        <div>
+            <strong>Checking Status:</strong> The discount list will automatically display the real-time status of your
+            codes, labeling them as <strong>ACTIVE</strong>, <strong>EXPIRED</strong> (if past the end date),
+            <strong>MAXED OUT</strong> (if the max usage has been reached), or <strong>INACTIVE</strong> (if you
+            manually disabled it).
+        </div>
+    </div>
+</section>

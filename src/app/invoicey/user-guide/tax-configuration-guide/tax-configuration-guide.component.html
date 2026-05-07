@@ -1,0 +1,60 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">account_balance</span> Tax Configuration Guide</h2>
+    <p>The <strong>Tax Configuration</strong> screen allows you to define the various tax rates and rules applicable to
+        your business. Setting these up accurately ensures that taxes are automatically calculated and applied correctly
+        on your invoices and quotations.</p>
+    <p>Here is a detailed breakdown of each field on the Tax Configuration screen:</p>
+
+    <hr>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="registrationTitle"></app-video-iframe>
+
+    <hr>
+
+    <h3>1. Tax Rule Name</h3>
+    <p><strong>Required</strong></p>
+    <p>This is the display name for your tax rule, which will help you identify it when assigning taxes to products or
+        services.</p>
+    <ul>
+        <li><strong>Purpose</strong>: To provide a clear label for the tax rate.</li>
+        <li><strong>Usage</strong>: Enter a descriptive name like <em>GST 18%, VAT 5%, IGST 12%</em>, or <em>Zero
+                Rated</em>. This name will appear in dropdowns across the application when selecting applicable taxes.
+        </li>
+    </ul>
+
+    <h3>2. Tax Rate (%)</h3>
+    <p><strong>Required</strong></p>
+    <p>The actual percentage amount for the tax rule.</p>
+    <ul>
+        <li><strong>Purpose</strong>: Defines the calculation percentage used to determine the tax amount on an item's
+            base price.</li>
+        <li><strong>Usage</strong>: Enter the numerical percentage value (e.g., <em>18.0</em> for 18%). Do not include
+            the <code>%</code> symbol, just the number.</li>
+    </ul>
+
+    <hr>
+
+    <div class="info-box">
+        <span class="material-symbols-outlined">info</span>
+        <div>
+            <strong>GST Logic & Automatic Splitting:</strong>
+            The system is designed to handle Indian GST smartly. During billing, the system will automatically look at
+            the customer's state and your business's state:
+            <ul>
+                <li><strong>Intra-state (Same State)</strong>: The tax rate will be automatically split into CGST and
+                    SGST (e.g., an 18% rule becomes 9% CGST and 9% SGST).</li>
+                <li><strong>Inter-state (Different State)</strong>: The tax rate will be applied as a single IGST charge
+                    (e.g., 18% IGST).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <span class="material-symbols-outlined">lightbulb</span>
+        <div>
+            <strong>Best Practice:</strong> After creating your tax rules here, you can assign them to individual items
+            in the <strong>Product Master</strong>. Setting up your taxes <em>before</em> adding your inventory will
+            save you significant time.
+        </div>
+    </div>
+</section>
