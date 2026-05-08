@@ -14,6 +14,11 @@ import { ServiceConfigurationGuideComponent } from './invoicey/user-guide/servic
 import { QuotationGuideComponent } from './invoicey/user-guide/quotation-guide/quotation-guide.component';
 import { ServiceBillingGuideComponent } from './invoicey/user-guide/service-billing-guide/service-billing-guide.component';
 import { InvoiceBillingGuideComponent } from './invoicey/user-guide/invoice-billing-guide/invoice-billing-guide.component';
+import { DamagedItemsGuideComponent } from './invoicey/user-guide/damaged-items-guide/damaged-items-guide.component';
+import { BusinessTrackerGuideComponent } from './invoicey/user-guide/business-tracker-guide/business-tracker-guide.component';
+import { GstReportsGuideComponent } from './invoicey/user-guide/gst-reports-guide/gst-reports-guide.component';
+import { PendingInvoicesGuideComponent } from './invoicey/user-guide/pending-invoices-guide/pending-invoices-guide.component';
+import { DeclarationListGuideComponent } from './invoicey/user-guide/declaration-list-guide/declaration-list-guide.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -34,6 +39,11 @@ export const routes: Routes = [
         { path: 'service-billing', component: ServiceBillingGuideComponent },
         { path: 'invoice-billing', component: InvoiceBillingGuideComponent },
         { path: 'discounts', component: DiscountManagementGuideComponent },
+        { path: 'damaged-items', component: DamagedItemsGuideComponent },
+        { path: 'business-tracker', component: BusinessTrackerGuideComponent },
+        { path: 'gst-reports', component: GstReportsGuideComponent },
+        { path: 'pending-invoices', component: PendingInvoicesGuideComponent },
+        { path: 'declaration-list', component: DeclarationListGuideComponent },
         { path: ':section', component: GenericGuideSectionComponent }
       ]
     }

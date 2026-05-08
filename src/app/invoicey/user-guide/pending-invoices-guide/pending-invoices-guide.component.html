@@ -1,0 +1,50 @@
+<section class="guide-section">
+  <h2><span class="material-symbols-outlined">pending_actions</span> 15. Pending Payments Guide</h2>
+  <p>The <strong>Pending Payments</strong> screen helps you keep track of outstanding dues from your customers. It acts
+    as an accounts receivable ledger, listing all invoices that haven't been fully paid yet.</p>
+
+  <hr>
+  <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="videoTitle"></app-video-iframe>
+
+  <hr>
+
+  <h3 style="text-align: center;">Key Features</h3>
+  <ul>
+    <li><strong>Pending & Partial Invoices</strong>: Lists all invoices with a status of either <code>PENDING</code> (no
+      payment recorded) or <code>PARTIAL</code> (some amount has been paid, but a balance remains).</li>
+    <li><strong>Search Functionality</strong>: Quickly find specific invoices by searching for the Customer Name or
+      Invoice Number.</li>
+    <li><strong>Outstanding Balance View</strong>: Each card displays the total invoice amount alongside the remaining
+      balance due.</li>
+    <li><strong>Automated Bookkeeping</strong>: Payments made via Card or UPI are automatically logged to your Business
+      Accounts Tracker.</li>
+  </ul>
+
+  <hr>
+
+  <h3 style="text-align: center;">Recording a Payment</h3>
+  <p>When a customer pays their outstanding balance, you need to record it in the system:</p>
+  <ol>
+    <li>Locate the invoice on the Pending Payments screen.</li>
+    <li>Click the <strong>Record Payment</strong> button on the invoice card.</li>
+    <li>In the popup dialog, the "Amount to Pay" field will auto-fill with the total remaining balance.
+      <ul>
+        <li><em>For Full Payments:</em> Leave the amount as is.</li>
+        <li><em>For Partial Payments:</em> Modify the amount to reflect what the customer actually paid.</li>
+      </ul>
+    </li>
+    <li>Select the <strong>Payment Method</strong> (Cash, Card, or UPI) from the dropdown menu.</li>
+    <li>Click <strong>Save Payment</strong>.</li>
+  </ol>
+
+  <hr>
+
+  <h3 style="text-align: center;">What happens next?</h3>
+  <ul>
+    <li>If the payment covers the entire remaining balance, the invoice status changes to <strong>Paid</strong> and it
+      is automatically removed from this list.</li>
+    <li>If it was a partial payment, the invoice status changes to <strong>PARTIAL</strong> and the remaining "Balance
+      Due" is updated.</li>
+    <li>Non-cash payments are securely recorded in your Business Tracker.</li>
+  </ul>
+</section>

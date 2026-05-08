@@ -1,0 +1,58 @@
+<section class="guide-section">
+  <h2><span class="material-symbols-outlined">receipt_long</span> 14. GST Return Sheets Guide</h2>
+  <p>The <strong>GST Return Sheets</strong> screen is a powerful tool to generate essential tax reports for filing your
+    Goods and Services Tax (GST) returns. It supports both monthly summaries and annual return data extraction in CSV
+    formats.</p>
+
+  <hr>
+  <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="videoTitle"></app-video-iframe>
+
+  <hr>
+
+  <h3 style="text-align: center;">Key Features</h3>
+  <ul>
+    <li><strong>Monthly & Yearly Views</strong>: Toggle between monthly and yearly reporting periods.</li>
+    <li><strong>Summary Metrics</strong>: Instantly view critical metrics for the selected period:
+      <ul>
+        <li>Total Invoices generated</li>
+        <li>Taxable Turnover (Total sales excluding tax)</li>
+        <li>Total GST Collected</li>
+      </ul>
+    </li>
+    <li><strong>Export to CSV</strong>: Download ready-to-use spreadsheet files for your accountant or tax filing
+      portal.</li>
+    <li><strong>Invoice Preview</strong>: A quick table displaying up to 20 invoices from the selected period.</li>
+  </ul>
+
+  <hr>
+
+  <h3 style="text-align: center;">Generating Reports</h3>
+  <p>Select your desired period using the <strong>Monthly / Yearly</strong> toggle and the <strong>Change</strong> date
+    button. Then, choose one of the following reports to download:</p>
+
+  <h4>1. GSTR-1 (Sales Statement)</h4>
+  <ul>
+    <li>Available in the <strong>Monthly</strong> view.</li>
+    <li>Generates a CSV file containing a detailed list of all outward supplies (sales) made during the month.</li>
+    <li>Useful for uploading your sales data to the GST portal.</li>
+  </ul>
+
+  <h4>2. GSTR-3B (Return Filing)</h4>
+  <ul>
+    <li>Available in the <strong>Monthly</strong> view.</li>
+    <li>Generates a summary CSV file required for your monthly self-declaration of GST liabilities.</li>
+  </ul>
+
+  <h4>3. GSTR-9 / GSTR-0 (Yearly Annual Summary)</h4>
+  <ul>
+    <li>Available in the <strong>Yearly</strong> view.</li>
+    <li>Extracts an annual summary of all transactions for the selected financial year to assist with annual return
+      filing.</li>
+  </ul>
+
+  <div style="background-color: #f8f9fa; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+    <strong>TIP:</strong> Make sure to review the "Summary Metrics" and "Invoice Preview" table before generating your
+    reports to ensure the selected period contains the expected data. Returned or canceled invoices will appear with a
+    strikethrough in the preview.
+  </div>
+</section>

@@ -26,9 +26,10 @@ export class UserGuideComponent {
     { id: 'quotation', title: '9. Quotation' },
     { id: 'service-billing', title: '10. Service Billing' },
     { id: 'invoice-billing', title: '11. Invoice Billing' },
-    { id: 'subscriptions', title: '12. Subscriptions & Payments' },
-    { id: 'billing', title: '13. Quotations & Invoices' },
-    { id: 'crm', title: '14. CRM (Customers & Vendors)' },
-    { id: 'reporting', title: '15. Declarations & Reporting' }
+    { id: 'damaged-items', title: '12. Damaged Items' },
+    { id: 'business-tracker', title: '13. Business Accounts Tracker' },
+    { id: 'gst-reports', title: '14. GST Return Sheets' },
+    { id: 'pending-invoices', title: '15. Pending Payments' },
+    { id: 'declaration-list', title: '16. Declaration List' }
   ];
 }

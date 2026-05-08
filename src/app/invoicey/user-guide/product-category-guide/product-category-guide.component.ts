@@ -10,7 +10,7 @@ import { VideoIframe } from "../../../common/video-iframe/video-iframe";
 })
 export class ProductCategoryGuideComponent {
 
-  registrationTitle = "Product Category Creation | Invoicey"
+  videoTitle = "Product Category Creation | Invoicey"
   videoLink = "https://youtu.be/2GxDpg5vUmw"
 
 }

@@ -1,0 +1,52 @@
+<section class="guide-section">
+  <h2><span class="material-symbols-outlined">account_balance_wallet</span> 13. Business Accounts Tracker Guide</h2>
+  <p>The <strong>Business Accounts Tracker</strong> serves as a digital cashbook and general ledger for your
+    organization. It allows you to monitor all inward and outward cash flows, maintaining a running balance over time.
+  </p>
+
+  <hr>
+  <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="videoTitle"></app-video-iframe>
+
+  <hr>
+
+  <h3 style="text-align: center;">Key Features</h3>
+  <ul>
+    <li><strong>Automated Logging</strong>: Whenever you record a non-cash invoice payment (e.g., Card or UPI), it
+      automatically appears here as an incoming transaction.</li>
+    <li><strong>Manual Record Entry</strong>: Add custom income (sales, rent, investments) or expenses (utilities,
+      salaries, supplies) directly.</li>
+    <li><strong>Running Balance</strong>: View your organization's financial health with an automatically calculated
+      running balance for each transaction.</li>
+    <li><strong>Monthly & Yearly Tracking</strong>: Toggle between monthly and yearly views to analyze your cash flow
+      over different timeframes.</li>
+    <li><strong>Export to CSV</strong>: Download your ledger to a spreadsheet using the download icon in the top right
+      corner.</li>
+  </ul>
+
+  <hr>
+
+  <h3 style="text-align: center;">Adding a Manual Record</h3>
+  <ol>
+    <li>Click the <strong>Add Record</strong> floating action button at the bottom right.</li>
+    <li>Select the <strong>Transaction Date</strong>.</li>
+    <li>Enter a short <strong>Description</strong> (e.g., "Office Internet Bill", "Walk-in Sales").</li>
+    <li>Define the <strong>Category</strong> (e.g., "Utilities", "Sales").</li>
+    <li>Enter the amount in the appropriate field:
+      <ul>
+        <li><strong>Cash In (+)</strong>: Use this for money received (income).</li>
+        <li><strong>Cash Out (-)</strong>: Use this for money spent (expenses).</li>
+      </ul>
+    </li>
+    <li>Click <strong>SAVE RECORD</strong>.</li>
+  </ol>
+
+  <hr>
+
+  <h3 style="text-align: center;">Editing or Deleting Records</h3>
+  <ul>
+    <li><strong>Edit</strong>: To modify an existing manual entry, locate the transaction and click the blue
+      <strong>Edit (pencil)</strong> icon. Update the necessary fields and save.</li>
+    <li><strong>Delete</strong>: If an entry was made in error, click the red <strong>Delete (trash)</strong> icon next
+      to the transaction to remove it permanently. The running balance will automatically recalculate.</li>
+  </ul>
+</section>
