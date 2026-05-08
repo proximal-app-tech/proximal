@@ -11,6 +11,9 @@ import { TaxConfigurationGuideComponent } from './invoicey/user-guide/tax-config
 import { ProductSettingsGuideComponent } from './invoicey/user-guide/product-settings-guide/product-settings-guide.component';
 import { DiscountManagementGuideComponent } from './invoicey/user-guide/discount-management-guide/discount-management-guide.component';
 import { ServiceConfigurationGuideComponent } from './invoicey/user-guide/service-configuration-guide/service-configuration-guide.component';
+import { QuotationGuideComponent } from './invoicey/user-guide/quotation-guide/quotation-guide.component';
+import { ServiceBillingGuideComponent } from './invoicey/user-guide/service-billing-guide/service-billing-guide.component';
+import { InvoiceBillingGuideComponent } from './invoicey/user-guide/invoice-billing-guide/invoice-billing-guide.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -27,6 +30,9 @@ export const routes: Routes = [
         { path: 'tax-configuration', component: TaxConfigurationGuideComponent },
         { path: 'products', component: ProductSettingsGuideComponent },
         { path: 'services', component: ServiceConfigurationGuideComponent },
+        { path: 'quotation', component: QuotationGuideComponent },
+        { path: 'service-billing', component: ServiceBillingGuideComponent },
+        { path: 'invoice-billing', component: InvoiceBillingGuideComponent },
         { path: 'discounts', component: DiscountManagementGuideComponent },
         { path: ':section', component: GenericGuideSectionComponent }
       ]

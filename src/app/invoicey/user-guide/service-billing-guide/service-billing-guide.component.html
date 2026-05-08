@@ -1,0 +1,72 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">receipt_long</span> Service Billing View - User Guide</h2>
+
+    <h3>Overview</h3>
+    <p>The <strong>Service Billing View</strong> is designed specifically for creating invoices for non-physical items
+        or professional services. Unlike product billing, service billing does not track inventory quantities and uses
+        SAC (Service Accounting Codes) instead of HSN codes.</p>
+
+    <hr>
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="serviceTitle"></app-video-iframe>
+    <hr>
+
+    <h3>Key Sections</h3>
+
+    <h4>1. Client/Customer Details</h4>
+    <p>Capture the details of the client receiving the service:</p>
+    <ul>
+        <li><strong>Phone Number:</strong> Enter the 10-digit phone number. Existing clients will be automatically
+            looked up and their details autofilled.</li>
+        <li><strong>Customer Name:</strong> Enter the full name or company name of the client.</li>
+        <li><strong>Email & Address:</strong> Record contact and billing information.</li>
+        <li><strong>State:</strong> Crucial for accurate GST calculation (determines whether CGST/SGST or IGST applies).
+        </li>
+        <li><strong>SEZ Zone:</strong> Mark this if the client operates in a Special Economic Zone, which will apply a
+            zero GST rate to the services.</li>
+        <li><strong>Save Customer Info:</strong> Check this to store the client's information in your database for
+            future service bills.</li>
+    </ul>
+
+    <h4>2. Add Services</h4>
+    <p>Add the professional services provided:</p>
+    <ul>
+        <li><strong>Add Service Item Button:</strong> Select from your pre-configured list of services.</li>
+        <li><strong>Service Details:</strong> Each service automatically includes its predefined unit price, SAC code,
+            and associated tax rate.</li>
+        <li><strong>Adjusting Values:</strong> You can modify the unit price or quantity (hours, days, units of service)
+            as needed for the specific bill.</li>
+    </ul>
+
+    <h4>3. Discounts & Miscellaneous</h4>
+    <ul>
+        <li><strong>Automatic Discounts:</strong> If a service belongs to a discounted category or has a direct discount
+            assigned, it will be automatically calculated and applied.</li>
+        <li><strong>Miscellaneous Charges:</strong> You can add any extra miscellaneous fees (e.g., travel expenses,
+            convenience fees, tips) before finalizing the total.</li>
+    </ul>
+
+    <h4>4. Holding a Service Bill</h4>
+    <ul>
+        <li><strong>Pause Icon:</strong> If you need to step away or gather more details from the client before
+            finalizing the bill, use the pause icon (top right) to hold the current session.</li>
+        <li><strong>Held Bills Banner:</strong> You will see an alert banner indicating how many held bills you have.
+            You can restore these drafts anytime without losing data.</li>
+    </ul>
+
+    <h4>5. Finalizing & Payment</h4>
+    <ul>
+        <li><strong>Proceed to Payment:</strong> Once all services and details are confirmed, click to proceed.</li>
+        <li><strong>Payment Processing:</strong> Record the payment against the service invoice. You can log Cash,
+            Online payments via Razorpay, or mark the invoice as unpaid/partially paid if the client is paying later.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Help & Tips</h3>
+    <ul>
+        <li>Use the <strong>Help Icon (?)</strong> for an on-screen summary of the billing steps.</li>
+        <li>Always ensure the correct State and SEZ status are selected before adding services to guarantee accurate tax
+            breakdown on the final invoice.</li>
+    </ul>
+</section>

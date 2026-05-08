@@ -23,9 +23,12 @@ export class UserGuideComponent {
     { id: 'discounts', title: '6. Discount Management' },
     { id: 'products', title: '7. Product Management' },
     { id: 'services', title: '8. Service Configuration' },
-    { id: 'subscriptions', title: '9. Subscriptions & Payments' },
-    { id: 'billing', title: '10. Quotations & Invoices' },
-    { id: 'crm', title: '11. CRM (Customers & Vendors)' },
-    { id: 'reporting', title: '12. Declarations & Reporting' }
+    { id: 'quotation', title: '9. Quotation' },
+    { id: 'service-billing', title: '10. Service Billing' },
+    { id: 'invoice-billing', title: '11. Invoice Billing' },
+    { id: 'subscriptions', title: '12. Subscriptions & Payments' },
+    { id: 'billing', title: '13. Quotations & Invoices' },
+    { id: 'crm', title: '14. CRM (Customers & Vendors)' },
+    { id: 'reporting', title: '15. Declarations & Reporting' }
   ];
 }

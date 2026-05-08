@@ -1,0 +1,66 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">request_quote</span> Quotation - User Guide</h2>
+
+    <h3>Overview</h3>
+    <p>The <strong>Quotation feature</strong> allows you to generate professional price estimates and proposals for your
+        customers before finalizing a sale. Quotations do not deduct items from your active inventory and are saved
+        separately from actual invoices. Once a customer approves a quote, it can easily be converted into a real
+        invoice.</p>
+
+    <hr>
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="quotationTitle"></app-video-iframe>
+    <hr>
+
+    <h3>Creating a Quotation</h3>
+    <p>Creating a quotation follows a nearly identical process to creating a standard bill, with a few key distinctions
+        tailored for providing estimates.</p>
+
+    <h4>1. Customer Details</h4>
+    <ul>
+        <li><strong>Look up or Add Customer:</strong> Enter the 10-digit phone number to autofill details, or enter new
+            customer information.</li>
+        <li><strong>Accuracy is Key:</strong> Ensure the address, State, and SEZ status are correct so the estimated GST
+            calculation accurately reflects what the final invoice will look like.</li>
+    </ul>
+
+    <h4>2. Adding Items to the Quote</h4>
+    <ul>
+        <li><strong>Select Products/Services:</strong> Add items the customer is inquiring about.</li>
+        <li><strong>Edit Pricing:</strong> If you are offering a special negotiated rate for this proposal, tap on the
+            unit price of any item to edit it. The system will still enforce your minimum price rules to ensure the
+            quote remains profitable.</li>
+        <li><strong>Inventory Handling:</strong> Adding products to a quotation <strong>does not</strong> reduce your
+            current stock levels. The stock is only deducted if the quote is later converted into an invoice.</li>
+    </ul>
+
+    <h4>3. Discounts and Taxes</h4>
+    <ul>
+        <li><strong>Apply Discounts:</strong> You can apply global or item-level discounts to sweeten the deal for your
+            prospective customer.</li>
+        <li><strong>Tax Preview:</strong> The quotation will provide a full breakdown of the taxes (CGST, SGST, or IGST)
+            based on the customer's state, giving them a transparent view of the final expected cost.</li>
+    </ul>
+
+    <h4>4. Saving and Sharing the Quote</h4>
+    <ul>
+        <li><strong>Quotation Number:</strong> Quotes are generated with a unique "QT" prefix (e.g., QT12345) to clearly
+            distinguish them from official invoices.</li>
+        <li><strong>Save Quotation:</strong> Once generated, the quote is saved in your Quotation List.</li>
+        <li><strong>Share:</strong> You can print the quotation or share it as a PDF via email or messaging apps with
+            your customer.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Converting a Quote to an Invoice</h3>
+    <p>When a customer accepts your quotation:</p>
+    <ol>
+        <li>Navigate to the <strong>Quotation List</strong>.</li>
+        <li>Select the approved quote.</li>
+        <li>Click on the option to <strong>Convert to Invoice</strong>.</li>
+        <li>The system will automatically load the Billing View with all the customer and product details from the quote
+            pre-filled.</li>
+        <li>You can make any final adjustments, proceed to payment, and generate the final tax invoice. At this point,
+            product stock levels will be officially updated.</li>
+    </ol>
+</section>

@@ -1,0 +1,77 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">point_of_sale</span> Billing View - User Guide</h2>
+
+    <h3>Overview</h3>
+    <p>The <strong>Billing View</strong> allows you to easily create product invoices, manage customer details, apply
+        discounts, and process payments. It is designed to be fast and intuitive, ensuring a smooth checkout experience
+        for your customers.</p>
+
+    <hr>
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="invoiceTitle"></app-video-iframe>
+    <hr>
+
+    <h3>Key Sections</h3>
+
+    <h4>1. Customer Details</h4>
+    <p>Capture and manage customer information for the invoice:</p>
+    <ul>
+        <li><strong>Phone Number:</strong> Enter the 10-digit phone number. The system will automatically look up
+            existing customers and autofill their details.</li>
+        <li><strong>Customer Name:</strong> Enter the full name of the customer.</li>
+        <li><strong>Email & Address:</strong> Optional fields to capture the customer's contact information.</li>
+        <li><strong>State:</strong> Select the customer's state for accurate GST calculation (e.g., CGST/SGST vs IGST).
+        </li>
+        <li><strong>GSTIN:</strong> Enter the customer's GST number if applicable.</li>
+        <li><strong>Consignee Details:</strong> If the shipping address is different from the billing address, check the
+            "Different Consignee" option to enter the shipping details.</li>
+        <li><strong>SEZ Zone:</strong> Check this box if the customer is in a Special Economic Zone (SEZ), which will
+            apply zero GST.</li>
+        <li><strong>Save Customer:</strong> Check this box to save the new customer's details for future transactions.
+        </li>
+    </ul>
+
+    <h4>2. Add Products</h4>
+    <p>Add items to the customer's bill:</p>
+    <ul>
+        <li><strong>Add Product Button:</strong> Opens a list to select products. You can also use a barcode scanner if
+            supported.</li>
+        <li><strong>Quantity Adjustment:</strong> Use the <code>+</code> and <code>-</code> buttons to adjust the
+            quantity. The system will warn you if you exceed the available stock.</li>
+        <li><strong>Price Editing:</strong> Tap on the unit price to edit it. The system enforces a minimum price to
+            ensure you do not sell below cost.</li>
+        <li><strong>Tax Calculation:</strong> Taxes are automatically calculated based on the product's tax rate,
+            customer's state, and SEZ status.</li>
+    </ul>
+
+    <h4>3. Discounts</h4>
+    <ul>
+        <li><strong>Auto-Discounts:</strong> Any category or product-level discounts are automatically applied to the
+            respective items.</li>
+        <li><strong>Global Discount:</strong> You can apply a flat discount or percentage discount to the entire
+            subtotal using the discount button.</li>
+    </ul>
+
+    <h4>4. Hold Bill (Drafts)</h4>
+    <ul>
+        <li><strong>Pause Icon:</strong> If you need to temporarily stop billing (e.g., the customer forgot their
+            wallet), tap the pause icon at the top right to hold the bill.</li>
+        <li><strong>Retrieve Drafts:</strong> Held bills will appear in a yellow banner at the top of the screen. You
+            can view, restore, or delete them at any time.</li>
+    </ul>
+
+    <h4>5. Payments</h4>
+    <ul>
+        <li><strong>Proceed to Payment:</strong> Once all products are added, click this button to finalize the bill.
+        </li>
+        <li><strong>Payment Methods:</strong> You can select from various payment methods, including Cash, Card, Online
+            Payment (Razorpay, Pinelabs, Paytm), or mark it as partially paid.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Help & Tips</h3>
+    <ul>
+        <li>Use the <strong>Help Icon (?)</strong> at the top right for quick reminders on how to use the screen.</li>
+        <li>Ensure your product inventory is updated to avoid "Exceeds Available Stock" warnings.</li>
+    </ul>
+</section>
