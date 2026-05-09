@@ -1,0 +1,24 @@
+.video-container {
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        margin: 15px auto;
+    }
+    
+    .video-container iframe {
+        border-radius: 4px;
+    }
+}
