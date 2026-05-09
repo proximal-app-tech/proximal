@@ -1,0 +1,100 @@
+<section class="guide-section">
+    <h2><span class="material-symbols-outlined">receipt_long</span> Invoice History (Invoice List) User Guide</h2>
+
+    <p>The <strong>Invoice History</strong> screen (also known as the Invoice List screen) is your centralized hub for
+        viewing and managing all invoices generated within Invoicey. It supports both Product and Service invoices and
+        offers a range of tools for searching, reviewing details, managing returns, and sharing invoices with your
+        customers.</p>
+
+    <hr>
+
+    <app-video-iframe [youtubeVideoUrl]="videoLink" [registrationTitle]="videoTitle"></app-video-iframe>
+
+    <hr>
+
+    <h3>1. Navigating the Invoice List</h3>
+    <p>The main view of this screen displays a list of all your generated invoices, sorted chronologically.</p>
+    <ul>
+        <li><strong>Invoice Cards:</strong> Each card in the list displays the customer's name, invoice number, total
+            amount, date of creation, and due date (if applicable).</li>
+        <li><strong>Tags:</strong> Invoices are clearly tagged as either <strong>PRODUCT</strong> or
+            <strong>SERVICE</strong> for quick identification.
+        </li>
+        <li><strong>Status Badges:</strong> If an invoice has been processed for a return, it will display a
+            <strong>RETURNED</strong> (fully returned) or <strong>PARTIAL RETURN</strong> badge.
+        </li>
+    </ul>
+
+    <h3>2. Key Features and Functions</h3>
+
+    <h4>Search functionality</h4>
+    <p>You can quickly find specific invoices using the search bar at the top of the screen.</p>
+    <ul>
+        <li><strong>Search by Name or Number:</strong> Type in either the <strong>Invoice Number</strong> or the
+            <strong>Customer's Name</strong> to instantly filter the list.
+        </li>
+        <li><strong>Clear Search:</strong> Click the "X" (clear) button inside the search field to reset the list and
+            view all invoices.</li>
+    </ul>
+
+    <h4>View Details</h4>
+    <p>To view the full details of an invoice, simply click or tap on it from the list.</p>
+    <ul>
+        <li><strong>Desktop/Tablet:</strong> The details will open in a dedicated reading pane on the right side of the
+            screen.</li>
+        <li><strong>Mobile:</strong> The details will slide up from the bottom of the screen in a detailed view.</li>
+    </ul>
+
+    <h4>Scan Invoice Barcode</h4>
+    <p>If you have a printed invoice with a barcode, you can instantly pull it up in the app.</p>
+    <ul>
+        <li>Click the <strong>Barcode Scanner Icon</strong> located in the top-right corner of the app bar.</li>
+        <li>Use your device's camera to scan the barcode, and the app will automatically fetch and display the
+            corresponding invoice details.</li>
+    </ul>
+
+    <h4>Print and Download PDF</h4>
+    <p>From the Invoice Details view, you have options to generate physical or digital copies.</p>
+    <ul>
+        <li><strong>Print/View PDF:</strong> Click the print/view option to generate a standard PDF format of the
+            original invoice for printing or downloading.</li>
+        <li><strong>Print Adjusted (Returns):</strong> If an invoice has been <em>partially returned</em>, you will have
+            the option to print an "Adjusted Invoice" that reflects the updated quantities and totals after the return.
+        </li>
+    </ul>
+
+    <h4>Email Invoice</h4>
+    <p>If your organization has enabled and configured Email Settings, you can email invoices directly to your
+        customers.</p>
+    <ul>
+        <li>In the Invoice Details view, click the <strong>Email</strong> button to instantly send the digital invoice
+            PDF to the customer's email address on file.</li>
+    </ul>
+
+    <h4>Return Invoice (Product Invoices Only)</h4>
+    <p>If a customer needs to return items due to damage, exchange, or receiving the wrong item, you can process returns
+        directly from this screen.</p>
+    <ul>
+        <li>Select the product invoice from the list and click the <strong>Return</strong> button.</li>
+        <li><strong>Specify Items and Quantities:</strong> A dialog will appear listing all eligible items. Enter the
+            exact quantity being returned (the system prevents returning more than the original sold amount).</li>
+        <li><strong>Select Reason:</strong> Choose a reason for the return (e.g., Damaged, Exchange, Wrong Item).</li>
+        <li><strong>Process Refund:</strong> Verify the calculated "Total Refund Amount" and select the transfer method
+            (Cash or Online) used to refund the customer.</li>
+        <li><em>Note: Returning items will automatically update the invoice status to "Partial Return" or "Returned" and
+                adjust your financial records.</em></li>
+    </ul>
+
+    <h4>Pull-to-Refresh</h4>
+    <p>To ensure you are looking at the most up-to-date information, you can refresh the invoice list.</p>
+    <ul>
+        <li>Simply pull down on the invoice list (or scroll to the top and swipe down) to fetch the latest product and
+            service invoices from the server.</li>
+    </ul>
+
+    <h4>Help & Guidance</h4>
+    <ul>
+        <li>If you ever need a quick reminder of the screen's features, click the <strong>Help (?) Icon</strong> in the
+            top right corner to display an on-screen summary.</li>
+    </ul>
+</section>
