@@ -116,6 +116,25 @@
     color: var(--primary);
 }
 
+.privacy-pill {
+    text-decoration: none;
+    transition: all 0.3s;
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.3);
+    cursor: pointer;
+}
+
+.privacy-pill:hover {
+    background: rgba(168, 85, 247, 0.25);
+    border-color: #a855f7;
+    transform: translateY(-2px);
+}
+
+.privacy-pill .material-symbols-outlined {
+    font-size: 18px;
+    color: #a855f7;
+}
+
 .hero-image-container {
     position: relative;
     display: flex;

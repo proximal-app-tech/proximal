@@ -31,6 +31,7 @@ export class UserGuideComponent {
     { id: 'gst-reports', title: '14. GST Return Sheets' },
     { id: 'pending-invoices', title: '15. Pending Payments' },
     { id: 'declaration-list', title: '16. Declaration List' },
-    { id: 'invoice-history', title: '17. Invoice History' }
+    { id: 'invoice-history', title: '17. Invoice History' },
+    { id: 'privacy-policy', title: '18. Privacy Policy' }
   ];
 }

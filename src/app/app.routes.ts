@@ -20,6 +20,7 @@ import { GstReportsGuideComponent } from './invoicey/user-guide/gst-reports-guid
 import { PendingInvoicesGuideComponent } from './invoicey/user-guide/pending-invoices-guide/pending-invoices-guide.component';
 import { DeclarationListGuideComponent } from './invoicey/user-guide/declaration-list-guide/declaration-list-guide.component';
 import { InvoiceHistoryGuideComponent } from './invoicey/user-guide/invoice-history-guide/invoice-history-guide.component';
+import { PrivacyPolicyGuideComponent } from './invoicey/user-guide/privacy-policy-guide/privacy-policy-guide.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -46,6 +47,7 @@ export const routes: Routes = [
         { path: 'pending-invoices', component: PendingInvoicesGuideComponent },
         { path: 'declaration-list', component: DeclarationListGuideComponent },
         { path: 'invoice-history', component: InvoiceHistoryGuideComponent },
+        { path: 'privacy-policy', component: PrivacyPolicyGuideComponent },
         { path: ':section', component: GenericGuideSectionComponent }
       ]
     }
