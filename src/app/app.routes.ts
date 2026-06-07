@@ -25,6 +25,8 @@ import { PrivacyPolicyGuideComponent } from './invoicey/user-guide/privacy-polic
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'invoicey', component: InvoiceyComponent },
+    { path: 'invoicey/features', loadComponent: () => import('./invoicey/features/features.component').then(m => m.FeaturesComponent) },
+    { path: 'invoicey/pricing', loadComponent: () => import('./invoicey/pricing/pricing.component').then(m => m.PricingComponent) },
     { 
       path: 'invoicey/user-guide', 
       component: UserGuideComponent,

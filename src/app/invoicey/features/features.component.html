@@ -1,0 +1,59 @@
+<main class="features-page">
+  <!-- Header Section -->
+  <section class="features-hero" aria-labelledby="main-heading">
+    <div class="container text-center">
+      <span class="badge">Comprehensive Capabilities</span>
+      <h1 id="main-heading" class="gradient-title">Packed with Modern SaaS Features</h1>
+      <p class="tagline-sub">Invoicey handles billing, tax reports, inventory, estimates, and payments, enabling you to
+        focus on scaling your enterprise.</p>
+    </div>
+  </section>
+
+  <!-- Detailed Feature Showcase List -->
+  <section class="features-showcase-list" aria-label="Feature details">
+    <div class="container">
+      <div class="features-detail-grid">
+        @for (feat of featuresList; track feat.title; let idx = $index) {
+        <article class="feature-item glass-card" [class.reverse]="idx % 2 !== 0">
+          <div class="feature-content">
+            <span class="feat-badge">{{ feat.badge }}</span>
+            <h2>{{ feat.title }}</h2>
+            <p class="feat-desc">{{ feat.description }}</p>
+
+            <ul class="feat-details-list">
+              @for (detail of feat.details; track detail) {
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                <span>{{ detail }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+          <div class="feature-visual-panel">
+            <div class="feat-icon-container">
+              <span class="material-symbols-outlined large-icon">{{ feat.icon }}</span>
+            </div>
+            <div class="visual-accent"></div>
+          </div>
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-bottom" aria-labelledby="cta-heading">
+    <div class="container glass-card cta-box">
+      <h2 id="cta-heading">Ready to Automate Your Billing?</h2>
+      <p>Start your 30-day free trial now. Access all invoicing, HSN inventory, and GST reports. No credit card
+        required.</p>
+      <div class="cta-btns">
+        <a routerLink="/pricing" class="btn btn-primary">
+          View Plans & Pricing
+          <span class="material-symbols-outlined" style="margin-left: 0.5rem; font-size: 20px;">arrow_forward</span>
+        </a>
+        <a routerLink="/invoicey/user-guide" class="btn btn-secondary">Read User Guide</a>
+      </div>
+    </div>
+  </section>
+</main>

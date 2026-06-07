@@ -1,8 +1,9 @@
+@if (!isInvoiceyRoute()) {
 <header class="header">
-  <nav class="nav-container">
-    <div class="logo">
+  <nav class="nav-container" aria-label="Proximal Navigation">
+    <a routerLink="/" class="logo">
       <span class="logo-text">PROXIMAL SOLUTIONS</span>
-    </div>
+    </a>
     <ul class="nav-links">
       <li><a routerLink="/" fragment="hero">Home</a></li>
       <li><a routerLink="/" fragment="products">Products</a></li>
@@ -10,14 +11,66 @@
     </ul>
   </nav>
 </header>
+} @else {
+<header class="header">
+  <nav class="nav-container" aria-label="Invoicey Product Navigation">
+    <a routerLink="/invoicey" class="logo">
+      <span class="logo-text">Invoicey</span>
+    </a>
+    <ul class="nav-links">
+      <li><a routerLink="/invoicey" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/invoicey/features" routerLinkActive="active-link">Features</a></li>
+      <li><a routerLink="/invoicey/pricing" routerLinkActive="active-link">Pricing</a></li>
+      <li><a routerLink="/invoicey/user-guide" routerLinkActive="active-link">User Guide</a></li>
+      <li><a routerLink="/">Developer Portal</a></li>
+    </ul>
+  </nav>
+</header>
+}
 
 <router-outlet />
 
+@if (!isInvoiceyRoute()) {
 <footer class="footer">
   <div class="container">
     <p>&copy; 2026 Proximal Solutions LLP. All rights reserved.</p>
   </div>
 </footer>
+} @else {
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">Invoicey</span>
+      <p class="brand-tagline">Automate your invoicing, calculate GST, map inventory codes, and manage customer transactions seamlessly.</p>
+      <div class="footer-app">
+        <a href="https://play.google.com/store/apps/details?id=com.proximal.invoicey" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+          <img src="/assets/google-play-badge.svg" alt="Get it on Google Play" width="135" height="40" class="play-badge-footer">
+        </a>
+      </div>
+    </div>
+    <div class="footer-links-col">
+      <h3>Product</h3>
+      <ul>
+        <li><a routerLink="/invoicey">Home</a></li>
+        <li><a routerLink="/invoicey/features">Features</a></li>
+        <li><a routerLink="/invoicey/pricing">Pricing</a></li>
+        <li><a routerLink="/invoicey/user-guide">User Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-links-col">
+      <h3>Corporate</h3>
+      <ul>
+        <li><a routerLink="/">About Proximal</a></li>
+        <li><a routerLink="/invoicey/user-guide/privacy-policy">Privacy Policy</a></li>
+        <li><a routerLink="/" fragment="contact">Get in Touch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Invoicey. Created by Proximal Solutions LLP. All rights reserved.</p>
+  </div>
+</footer>
+}
 
 @if (showToaster()) {
 <div class="toaster-container">

@@ -1,0 +1,230 @@
+.features-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  color: white;
+  background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.08), transparent 45%),
+              radial-gradient(circle at middle right, rgba(99, 102, 241, 0.08), transparent 45%);
+}
+
+.features-hero {
+  padding: 5rem 0 3rem;
+}
+
+.text-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline-sub {
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+.features-showcase-list {
+  padding: 4rem 0;
+}
+
+.features-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  padding: 4rem;
+  align-items: center;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.feature-item:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.05);
+  transform: translateY(-4px);
+}
+
+.feature-item.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.feature-item.reverse .feature-content {
+  order: 2;
+}
+
+.feature-item.reverse .feature-visual-panel {
+  order: 1;
+}
+
+.feat-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 50px;
+  color: #c084fc;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.feature-content h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #fff 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feat-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.feat-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.feat-details-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.check-icon {
+  color: #a855f7;
+  font-size: 20px;
+}
+
+/* Feature Visual Panel */
+.feature-visual-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.feat-icon-container {
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-item:hover .feat-icon-container {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.large-icon {
+  font-size: 44px;
+  background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.visual-accent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  filter: blur(20px);
+  z-index: 1;
+}
+
+/* CTA Bottom */
+.cta-bottom {
+  padding: 6rem 0;
+}
+
+.cta-box {
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+.cta-box h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .feature-item, .feature-item.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .feature-item.reverse .feature-content {
+    order: 1;
+  }
+
+  .feature-item.reverse .feature-visual-panel {
+    order: 2;
+  }
+
+  .feature-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-box {
+    padding: 3rem 2rem;
+  }
+
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+}

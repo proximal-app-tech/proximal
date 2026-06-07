@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /invoicey
+Allow: /invoicey/features
+Allow: /invoicey/pricing
+Allow: /invoicey/user-guide
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /callback/
+Disallow: /*/dashboard
+Disallow: /*/auth
+Disallow: /*/callback
+
+Sitemap: https://invoicey.com/sitemap.xml

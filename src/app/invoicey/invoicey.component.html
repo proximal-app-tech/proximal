@@ -1,25 +1,20 @@
-<div class="invoicey-page">
-    <!-- Back Button -->
-    <div class="container">
-        <a routerLink="/" class="back-link">
-            <span class="material-symbols-outlined">arrow_back</span> Back to Home
-        </a>
-    </div>
-
+<main class="invoicey-page">
     <!-- Hero Section -->
-    <section class="invoicey-hero">
+    <section class="invoicey-hero" aria-label="Introduction">
         <div class="container hero-grid">
             <div class="hero-text">
                 <div class="badge">Version 2.0 Now Live</div>
                 <h1 class="gradient-title">Invoicey</h1>
-                <p class="tagline">Smart Billing & Invoicing Solution</p>
+                <p class="tagline">Simple, Fast & Compliant Invoicing & Billing Software</p>
                 <p class="description">
-                    A modern, high-performance billing application built with Flutter,
-                    designed to streamline business operations for organizations of all sizes.
+                    Automate your billing, track inventory, and generate GST-compliant invoices with Invoicey. Perfect
+                    for Indian SMBs, retailers, and service providers. Start your 30-day free trial today!
                 </p>
                 <div class="download-container">
-                    <a href="https://play.google.com/store/apps/details?id=com.proximal.invoicey" target="_blank" rel="noopener noreferrer" class="playstore-btn">
-                        <img src="/assets/google-play-badge.svg" alt="Get it on Google Play" class="playstore-badge">
+                    <a href="https://play.google.com/store/apps/details?id=com.proximal.invoicey" target="_blank"
+                        rel="noopener noreferrer" class="playstore-btn" aria-label="Get it on Google Play">
+                        <img src="/assets/google-play-badge.svg" alt="Get it on Google Play" class="playstore-badge"
+                            width="168" height="50">
                     </a>
                 </div>
                 <div class="technical-pills">
@@ -33,23 +28,57 @@
                         <span class="material-symbols-outlined">menu_book</span>
                         <span class="pill-value">User Guide</span>
                     </a>
-                    <a routerLink="/invoicey/user-guide/privacy-policy" class="pill privacy-pill">
-                        <span class="material-symbols-outlined">shield</span>
-                        <span class="pill-value">Privacy Policy</span>
-                    </a>
                 </div>
             </div>
             <div class="hero-image-container">
                 <div class="glass-bg"></div>
-                <img src="/assets/Invoicey_image_3D.jpg" alt="Invoicey Product Preview" class="product-hero-img">
+                <img src="/assets/Invoicey_image_3D.jpg" alt="Invoicey Product Preview - Mobile App Interface"
+                    class="product-hero-img" width="600" height="450">
             </div>
         </div>
     </section>
 
-    <!-- Features Grid -->
-    <section class="features-section">
+    <!-- GST Compliance Focus Section -->
+    <section class="gst-focus-section" aria-labelledby="gst-title">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
+            <div class="gst-banner glass-card">
+                <div class="gst-content">
+                    <span class="badge">100% Tax Compliant</span>
+                    <h2 id="gst-title">GST Billing Made Effortless</h2>
+                    <p>Designed specifically for Indian businesses. Automatic calculation of CGST, SGST, and IGST rates.
+                        Make professional, tax-compliant invoice bills instantly and send email automatically to your
+                        customers</p>
+                    <div class="gst-features">
+                        <div class="gst-feat-item">
+                            <span class="material-symbols-outlined text-purple">receipt_long</span>
+                            <div>
+                                <h3>GST Report Generator</h3>
+                                <p>Export ready-to-file CGST/SGST/IGST tax reports instantly.</p>
+                            </div>
+                        </div>
+                        <div class="gst-feat-item">
+                            <span class="material-symbols-outlined text-purple">pin</span>
+                            <div>
+                                <h3>HSN/SKU Code Mapping</h3>
+                                <p>Organize catalogs with required HSN codes and custom SKUs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gst-visual">
+                    <div class="gst-pill">CGST 9% + SGST 9%</div>
+                    <div class="gst-pill">IGST 18%</div>
+                    <div class="gst-pill">GST-Ready PDF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="features-section" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title" class="section-title">Key Core Features</h2>
+            <p class="section-subtitle">Discover tools tailored to accelerate and grow your business.</p>
             <div class="features-grid">
                 @for (feature of features; track feature.title) {
                 <div class="feature-card">
@@ -61,36 +90,42 @@
                 </div>
                 }
             </div>
+            <div class="features-cta">
+                <a routerLink="/invoicey/features" class="btn btn-secondary">
+                    View Detailed Features
+                    <span class="material-symbols-outlined"
+                        style="margin-left: 0.5rem; font-size: 20px;">arrow_forward</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Product Showcase -->
-    <section class="showcase-section">
+    <section class="showcase-section" aria-labelledby="showcase-title">
         <div class="container glass-card showcase-inner">
             <div class="showcase-content">
-                <h2>Why Choose Invoicey?</h2>
+                <h2 id="showcase-title">Why Choose Invoicey?</h2>
                 <p>
-                    Invoicey eliminates the overhead of manual billing, reducing errors and saving time.
-                    Whether you're a small retailer or a growing enterprise, Invoicey scales with your business,
-                    providing the professional edge needed in today's market.
+                    Invoicey eliminates the overhead of manual billing, reducing human calculation errors and saving
+                    valuable customer check-out time. Whether you're a small retailer, service agency, or a growing
+                    enterprise, Invoicey scales with your workflows seamlessly.
                 </p>
                 <ul class="benefit-list">
-                    <li><span class="material-symbols-outlined">check_circle</span> Real-time Backend with Supabase</li>
-                    <li><span class="material-symbols-outlined">check_circle</span> Secure by Design (RLS
-                        Implementation)</li>
-                    <li><span class="material-symbols-outlined">check_circle</span> Vertical Card-List Admin Dashboard</li>
-                    <li><span class="material-symbols-outlined">check_circle</span> Professional HSN/SKU organization
-                    </li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Professional HSN/SKU inventory
+                        organizations</li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Multi-Admin support with role-based
+                        restrictions</li>
                 </ul>
-                <!-- <button class="btn btn-primary">
+                <a routerLink="/invoicey/pricing" class="btn btn-primary">
                     Get Started Now
                     <span class="material-symbols-outlined"
                         style="margin-left: 0.5rem; font-size: 20px;">arrow_forward</span>
-                </button> -->
+                </a>
             </div>
             <div class="showcase-visual">
-                <img src="/assets/Invoicey_LOGO_Final.png" alt="Invoicey Dashboard" class="showcase-img">
+                <img src="/assets/Invoicey_LOGO_Final.png" alt="Invoicey Brand Logo" class="showcase-img" width="300"
+                    height="300">
             </div>
         </div>
     </section>
-</div>
+</main>

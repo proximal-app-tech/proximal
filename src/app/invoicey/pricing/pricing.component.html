@@ -1,0 +1,73 @@
+<main class="pricing-page">
+  <!-- Header Section -->
+  <section class="pricing-hero" aria-labelledby="pricing-heading">
+    <div class="container text-center">
+      <span class="badge">Simple & Flexible Pricing</span>
+      <h1 id="pricing-heading" class="gradient-title">Plans for Every Business Size</h1>
+      <p class="tagline-sub">Select the billing plan that aligns with your scale. Try our features with a risk-free 30-day trial, no credit card required.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Grid -->
+  <section class="pricing-grid-section" aria-label="Subscription plans">
+    <div class="container">
+      <div class="pricing-grid">
+        @for (plan of plans; track plan.name) {
+          <article class="pricing-card glass-card" [class.popular-card]="plan.popular">
+            @if (plan.popular) {
+              <div class="popular-ribbon">Most Popular</div>
+            }
+            <div class="card-header">
+              <span class="plan-badge">{{ plan.badge }}</span>
+              <h2>{{ plan.name }}</h2>
+              <div class="price-container">
+                <span class="currency">₹</span>
+                <span class="price">{{ plan.priceTotal }}</span>
+                <span class="period">/{{ plan.billingPeriod }}</span>
+              </div>
+              @if (plan.name !== 'Trial') {
+                <span class="tax-note">+ 18% GST</span>
+              }
+            </div>
+
+            <ul class="plan-features-list">
+              @for (feat of plan.features; track feat) {
+                <li>
+                  <span class="material-symbols-outlined check-icon">check</span>
+                  <span>{{ feat }}</span>
+                </li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing FAQ / Notes -->
+  <section class="pricing-faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="faq-wrapper glass-card">
+        <h2 id="faq-heading" class="text-center">Pricing & License FAQ</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Are there any setup fees or hidden charges?</h3>
+            <p>No. There are absolutely no onboarding fees, configuration fees, or hidden charges. The price listed is final and includes standard software updates.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I cancel or change my plan anytime?</h3>
+            <p>Yes. You can upgrade, downgrade, or cancel your active subscription plan at any time directly through your account dashboard. Upgrades apply immediately.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need a GSTIN to register or use Invoicey?</h3>
+            <p>Yes, you need a valid GSTIN (Goods and Services Tax Identification Number) to register on Invoicey. This ensures that all generated invoices, tax calculations (CGST/SGST/IGST), and exportable financial reports remain fully compliant with Indian tax regulations.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What happens after my 30-day free trial ends?</h3>
+            <p>At the end of your 30-day evaluation period, you will be prompted to choose a Premium Monthly, 6-Month, or Yearly plan to continue generating invoices. Your existing catalogs and data will remain safe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
