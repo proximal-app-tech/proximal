@@ -16,6 +16,7 @@ export class App {
 
   protected readonly title = signal('Proximal');
   isInvoiceyRoute = signal(false);
+  isMobileMenuOpen = signal(false);
 
   showToaster = signal(false);
   toasterMessage = signal('');
@@ -26,7 +27,16 @@ export class App {
     ).subscribe((event) => {
       const url = event.urlAfterRedirects || event.url;
       this.isInvoiceyRoute.set(url.startsWith('/invoicey'));
+      this.isMobileMenuOpen.set(false);
     });
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen.update((v) => !v);
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen.set(false);
   }
 
   // The toaster logic remains in App for global accessibility

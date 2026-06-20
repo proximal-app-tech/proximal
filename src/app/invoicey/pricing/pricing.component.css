@@ -88,10 +88,14 @@
   padding: 3rem 0 6rem;
 }
 
+.pricing-grid-section .container {
+  max-width: 1400px;
+}
+
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   align-items: stretch;
 }
 
@@ -99,7 +103,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3rem 2.25rem;
+  padding: 2.5rem 1.25rem;
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -141,6 +145,8 @@
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .plan-badge {
@@ -168,20 +174,20 @@
 }
 
 .currency {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: white;
 }
 
 .price {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1;
 }
 
 .period {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .tax-note {
@@ -269,17 +275,24 @@
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
   .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .pricing-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .faq-wrapper {

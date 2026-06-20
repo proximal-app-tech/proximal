@@ -27,7 +27,6 @@ export class PricingComponent implements OnInit {
     },
     {
       name: 'Premium Monthly',
-      priceMonthly: 250,
       priceTotal: 250,
       billingPeriod: '30 Days',
       badge: 'Flexible',
@@ -38,8 +37,18 @@ export class PricingComponent implements OnInit {
       ]
     },
     {
-      name: 'Premium 6 Months',
-      priceMonthly: 250,
+      name: 'Premium Quarterly',
+      priceTotal: 750,
+      billingPeriod: '90 Days',
+      badge: 'Flexible',
+      popular: false,
+      features: [
+        'Unlimited invoice generation',
+        'Unlimited user accounts access'
+      ]
+    },
+    {
+      name: 'Premium Half Yearly',
       priceTotal: 1500,
       billingPeriod: '180 Days',
       badge: 'Bestseller',
@@ -51,7 +60,6 @@ export class PricingComponent implements OnInit {
     },
     {
       name: 'Premium Yearly',
-      priceMonthly: 250,
       priceTotal: 3000,
       billingPeriod: '365 Days',
       badge: 'Best Value',
