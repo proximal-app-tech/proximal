@@ -21,10 +21,14 @@ import { PendingInvoicesGuideComponent } from './invoicey/user-guide/pending-inv
 import { DeclarationListGuideComponent } from './invoicey/user-guide/declaration-list-guide/declaration-list-guide.component';
 import { InvoiceHistoryGuideComponent } from './invoicey/user-guide/invoice-history-guide/invoice-history-guide.component';
 import { PrivacyPolicyGuideComponent } from './invoicey/user-guide/privacy-policy-guide/privacy-policy-guide.component';
+import { TrackxpensiveComponent } from './trackxpensive/trackxpensive.component';
+import { TrackxpensiveLegalComponent } from './trackxpensive/legal/trackxpensive-legal.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'invoicey', component: InvoiceyComponent },
+    { path: 'trackxpensive', component: TrackxpensiveComponent },
+    { path: 'trackxpensive/privacy-terms', component: TrackxpensiveLegalComponent },
     { path: 'invoicey/features', loadComponent: () => import('./invoicey/features/features.component').then(m => m.FeaturesComponent) },
     { path: 'invoicey/pricing', loadComponent: () => import('./invoicey/pricing/pricing.component').then(m => m.PricingComponent) },
     { 

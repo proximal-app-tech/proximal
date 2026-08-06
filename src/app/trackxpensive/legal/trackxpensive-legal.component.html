@@ -1,0 +1,204 @@
+<main class="legal-page">
+  <div class="container">
+    <!-- Navigation Back Link -->
+    <div class="nav-back">
+      <a routerLink="/trackxpensive" class="back-link">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Back to TrackXpensive</span>
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="legal-header">
+      <h1 class="gradient-title">Legal & Privacy Center</h1>
+      <p class="subtitle">Please read our Terms and Privacy details for the TrackXpensive mobile application.</p>
+    </header>
+
+    <!-- Tab Selection Toggles -->
+    <div class="tab-container">
+      <button 
+        class="tab-btn" 
+        [class.active]="activeTab === 'privacy'" 
+        (click)="setActiveTab('privacy')">
+        <span class="material-symbols-outlined">shield</span>
+        <span>Privacy Policy</span>
+      </button>
+      <button 
+        class="tab-btn" 
+        [class.active]="activeTab === 'terms'" 
+        (click)="setActiveTab('terms')">
+        <span class="material-symbols-outlined">gavel</span>
+        <span>Terms & Conditions</span>
+      </button>
+    </div>
+
+    <!-- Content Card -->
+    <article class="legal-card glass-card">
+      
+      <!-- PRIVACY POLICY CONTENT -->
+      @if (activeTab === 'privacy') {
+        <section class="policy-content animate-fade">
+          <div class="policy-heading">
+            <h2>Privacy Policy for TrackXpensive</h2>
+            <div class="effective-date">Effective Date: July 23, 2026</div>
+          </div>
+          
+          <p class="intro-p">
+            This Privacy Policy describes how <strong>Proximal Solutions LLP</strong> ("we," "us," or "our") handles your information when you use the TrackXpensive mobile application ("the App").
+          </p>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">1</span>
+              <h3>Data Collection and Storage</h3>
+            </div>
+            <p>
+              TrackXpensive is designed as a completely offline application. We prioritize your privacy; therefore, the App does not collect, transmit, or store any of your personal or financial data on our servers or any third-party servers. All expense records, categories, budget limits, and application settings are stored locally on your device's internal storage using an SQLite database. You are the sole owner of the data entered into the App.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">2</span>
+              <h3>Internet Connectivity and Third-Party Services</h3>
+            </div>
+            <p>
+              Because TrackXpensive operates fully offline, it does not require an internet connection for its core functionalities. We do not integrate third-party analytics trackers, advertising networks, or data-harvesting SDKs that monitor your behavior or financial entries.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">3</span>
+              <h3>Data Backup and Migration</h3>
+            </div>
+            <p>
+              The App provides a manual migration and backup feature. When you choose to use the "Download My Backup" feature, a <code>.db</code> file is generated locally on your device. You are entirely responsible for the secure storage, transfer, and management of this backup file. We cannot access, recover, or reset this data if it is lost or compromised.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">4</span>
+              <h3>Changes to This Privacy Policy</h3>
+            </div>
+            <p>
+              We may update this Privacy Policy periodically. If any significant changes are made regarding how the App operates concerning user data, we will provide an updated version within the App.
+            </p>
+          </div>
+
+          <div class="section-block contact-block">
+            <div class="block-header">
+              <span class="section-number">5</span>
+              <h3>Contact Us</h3>
+            </div>
+            <p>
+              If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:
+            </p>
+            <div class="email-badge">
+              <span class="material-symbols-outlined">mail</span>
+              <a href="mailto:support@proximal.co.in">support@proximal.co.in</a>
+            </div>
+          </div>
+        </section>
+      }
+
+      <!-- TERMS & CONDITIONS CONTENT -->
+      @if (activeTab === 'terms') {
+        <section class="terms-content animate-fade">
+          <div class="policy-heading">
+            <h2>Terms and Conditions for TrackXpensive</h2>
+            <div class="effective-date">Effective Date: July 23, 2026</div>
+          </div>
+
+          <p class="intro-p">
+            These Terms and Conditions ("Terms") govern your use of the TrackXpensive mobile application ("the App"), developed and owned by <strong>Proximal Solutions LLP</strong> ("Company," "we," "us," or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms.
+          </p>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">1</span>
+              <h3>Use of the Application</h3>
+            </div>
+            <p>
+              TrackXpensive is provided for your personal, non-commercial use to track day-to-day expenses, manage budgets, and analyze financial habits. You agree to use the App only for lawful purposes and in a way that does not infringe upon the rights of others.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">2</span>
+              <h3>Data Ownership and Responsibility</h3>
+            </div>
+            <div class="sub-points">
+              <div class="sub-point">
+                <strong>Local Storage:</strong> All data generated by you within the App is stored locally on your device. Proximal Solutions LLP does not have access to your data.
+              </div>
+              <div class="sub-point">
+                <strong>Data Loss:</strong> Because the App is fully offline and does not utilize cloud synchronization, Proximal Solutions LLP is not responsible for any data loss resulting from device damage, uninstallation of the App, loss of the device, or failure to properly manage manual backups.
+              </div>
+              <div class="sub-point">
+                <strong>Backup Management:</strong> You are solely responsible for utilizing the backup features provided in the App to secure your data during device migrations.
+              </div>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">3</span>
+              <h3>Intellectual Property</h3>
+            </div>
+            <p>
+              The App, including its original code, design, graphics, layouts, and trademarks, is the exclusive property of Proximal Solutions LLP. You may not modify, reverse engineer, decompile, or create derivative works based on the App without explicit written consent from us.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">4</span>
+              <h3>Disclaimer of Warranties</h3>
+            </div>
+            <p>
+              The App is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive to provide accurate budget tracking and analytics, Proximal Solutions LLP makes no warranties, expressed or implied, regarding the accuracy, reliability, or completeness of the App's calculations or features. The App is not a substitute for professional financial or accounting advice.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">5</span>
+              <h3>Limitation of Liability</h3>
+            </div>
+            <p>
+              To the maximum extent permitted by applicable law, Proximal Solutions LLP shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenues, or data, whether incurred directly or indirectly, resulting from your use of or inability to use the App.
+            </p>
+          </div>
+
+          <div class="section-block">
+            <div class="block-header">
+              <span class="section-number">6</span>
+              <h3>Governing Law and Jurisdiction</h3>
+            </div>
+            <p>
+              These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts located in Coimbatore, Tamil Nadu.
+            </p>
+          </div>
+
+          <div class="section-block contact-block">
+            <div class="block-header">
+              <span class="section-number">7</span>
+              <h3>Contact Information</h3>
+            </div>
+            <p>
+              For any questions regarding these Terms, please contact us via the Support tab within the App or email us directly at:
+            </p>
+            <div class="email-badge">
+              <span class="material-symbols-outlined">mail</span>
+              <a href="mailto:support@proximal.co.in">support@proximal.co.in</a>
+            </div>
+          </div>
+        </section>
+      }
+
+    </article>
+  </div>
+</main>

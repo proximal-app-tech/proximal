@@ -1,0 +1,328 @@
+.legal-page {
+  background-color: #0B0F19;
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Nav back link */
+.nav-back {
+  margin-bottom: 2.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.back-link:hover {
+  color: #818cf8;
+  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.05);
+  transform: translateX(-4px);
+}
+
+.back-link .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+/* Header styling */
+.legal-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.gradient-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 70%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Tabs Switcher */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(99, 102, 241, 0.25);
+  color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.tab-btn .material-symbols-outlined {
+  font-size: 1.3rem;
+}
+
+/* Legal Content Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  transition: all 0.3s ease;
+}
+
+/* Animations */
+.animate-fade {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Policy Content Details */
+.policy-heading {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1.5rem;
+}
+
+.policy-heading h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.effective-date {
+  color: #ec4899;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.section-block {
+  margin-bottom: 2.5rem;
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.block-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.section-block p {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-left: 2.75rem;
+  font-size: 0.98rem;
+}
+
+.sub-points {
+  margin-left: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sub-point {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.sub-point strong {
+  color: #e2e8f0;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+/* Code block highlight styling */
+code {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-family: Consolas, monospace;
+  color: #f472b6;
+  font-size: 0.9rem;
+}
+
+/* Contact Block / Email Badge */
+.contact-block {
+  background: rgba(99, 102, 241, 0.03);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.contact-block p {
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+
+.contact-block .block-header {
+  margin-bottom: 0.75rem;
+}
+
+.email-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(236, 72, 153, 0.08);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.email-badge:hover {
+  background: rgba(236, 72, 153, 0.12);
+  border-color: rgba(236, 72, 153, 0.3);
+  transform: translateY(-2px);
+}
+
+.email-badge .material-symbols-outlined {
+  color: #f472b6;
+}
+
+.email-badge a {
+  color: #ec4899;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.email-badge a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+  
+  .tab-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .block-header {
+    align-items: flex-start;
+  }
+
+  .section-number {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .section-block p, .sub-points {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
