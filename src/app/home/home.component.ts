@@ -62,11 +62,11 @@ export class HomeComponent {
             icon: '/assets/invoicey_icon_dark_theme.png',
             link: '/invoicey'
         },
-        // {
-        //     name: 'TrackXpensive',
-        //     description: 'The Premium, Privacy-First Personal Finance Companion.',
-        //     icon: '/assets/TrackXpensive/TrackXpensive Icon.png',
-        //     link: '/trackxpensive'
-        // }
+        {
+            name: 'TrackXpensive',
+            description: 'The Premium, Privacy-First Personal Finance Companion.',
+            icon: '/assets/TrackXpensive/TrackXpensive Icon.png',
+            link: '/trackxpensive'
+        }
     ];
 }
